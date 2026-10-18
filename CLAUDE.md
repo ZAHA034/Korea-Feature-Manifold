@@ -25,6 +25,7 @@ Korea Feature Manifold (KFM): 한국의 지형·인구·연결망을 비유클�
 - 임베딩 산출물에는 왜곡 지표(DESIGN.md 6.6)를 반드시 함께 저장한다.
 - 밀도 적응 배분에는 항상 최소 하한 `n_min`을 적용한다(DESIGN.md 7.3).
 - 설계 변경 시 `docs/decisions/`에 결정 기록을 추가하고 DESIGN.md를 갱신한다.
+- `docs/PLAN.md`는 v0.3에서 동결했다. 계획 변경은 `docs/decisions/`의 ADR로만 하고 PLAN 본문은 고치지 않는다.
 
 ## 현재 단계
 0단계: 골격 + 0S 탐색 실험 (docs/PLAN.md 6.1·6.1a절, DESIGN.md 12장 참고)
