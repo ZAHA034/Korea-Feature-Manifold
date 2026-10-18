@@ -27,4 +27,5 @@ Korea Feature Manifold (KFM): 한국의 지형·인구·연결망을 비유클�
 - 설계 변경 시 `docs/decisions/`에 결정 기록을 추가하고 DESIGN.md를 갱신한다.
 
 ## 현재 단계
-0단계: 골격 (DESIGN.md 12장 참고)
+0단계: 골격 + 0S 탐색 실험 (docs/PLAN.md 6.1·6.1a절, DESIGN.md 12장 참고)
+- 0S(`notebooks/spike/`)는 버리는 탐색 코드로, `runs` 기록·스키마·fixture 선행 테스트 규칙의 예외다(PLAN 6.1a).
