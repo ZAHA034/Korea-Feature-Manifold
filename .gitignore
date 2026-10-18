@@ -1,0 +1,34 @@
+# 데이터: git에 올리지 않는다 (CLAUDE.md)
+data/
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.hypothesis/
+
+# 노트북
+.ipynb_checkpoints/
+
+# 웹 뷰어
+viewer/node_modules/
+viewer/dist/
+
+# 로컬 DB
+*.duckdb
+*.duckdb.wal
+
+# 로컬 설정
+.env
+.claude/settings.local.json
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
