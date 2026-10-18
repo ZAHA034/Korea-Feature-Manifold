@@ -27,6 +27,7 @@ viewer/dist/
 # 로컬 설정
 .env
 .claude/settings.local.json
+.vscode/
 
 # OS
 .DS_Store

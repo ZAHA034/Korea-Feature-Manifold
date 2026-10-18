@@ -1,0 +1,48 @@
+[project]
+name = "kfm"
+version = "0.1.0"
+description = "Korea Feature Manifold: 한국의 지형·인구·연결망을 비유클리드 기하 위에서 다루는 국토 분석 기준선 프레임워크"
+authors = [
+    { name = "ZAHA034", email = "272267547+ZAHA034@users.noreply.github.com" }
+]
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "duckdb>=1.5.6",
+    "geopandas>=1.2.0",
+    "networkx>=3.6.1",
+    "numpy>=2.4.6",
+    "pandas>=3.0.6",
+    "pyarrow>=26.0.0",
+    "pydantic>=2.14.1",
+    "pyproj>=3.7.2",
+    "pyyaml>=6.0.3",
+    "scipy>=1.17.1",
+    "shapely>=2.2.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.19,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = ["docs"]   # 동결 문서(PLAN)와 ADR 채택 전 DESIGN.md를 포맷하지 않는다
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-m 'not data'"
+markers = [
+    "data: data/ 아래 실데이터가 필요한 테스트. 기본 실행에서 제외하고 `-m data`로 실행한다",
+]
+
+[dependency-groups]
+dev = [
+    "hypothesis>=6.170.1",
+    "pytest>=9.1.1",
+    "ruff>=0.17.1",
+]
