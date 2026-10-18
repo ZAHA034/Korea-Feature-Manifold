@@ -28,5 +28,4 @@ Korea Feature Manifold (KFM): 한국의 지형·인구·연결망을 비유클�
 - `docs/PLAN.md`는 v0.3에서 동결했다. 계획 변경은 `docs/decisions/`의 ADR로만 하고 PLAN 본문은 고치지 않는다.
 
 ## 현재 단계
-0단계: 골격 + 0S 탐색 실험 (docs/PLAN.md 6.1·6.1a절, DESIGN.md 12장 참고)
-- 0S(`notebooks/spike/`)는 버리는 탐색 코드로, `runs` 기록·스키마·fixture 선행 테스트 규칙의 예외다(PLAN 6.1a).
+0단계 + 0S 탐색 실험. 0S 판정 규칙(ADR 0010 2·5·6·7항, 0013) 채택 전에는 실데이터로 곡률·임베딩·δ를 계산하지 않는다.
