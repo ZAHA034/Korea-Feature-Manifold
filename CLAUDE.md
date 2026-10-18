@@ -9,6 +9,7 @@ Korea Feature Manifold (KFM): 한국의 지형·인구·연결망을 비유클�
 - 환경: `uv sync`
 - 테스트: `uv run pytest`
 - 린트/포맷: `uv run ruff check . && uv run ruff format .`
+- 가상환경은 OneDrive 밖 `C:\dev\kfm-venv`에 있다. Claude Code는 `.claude/settings.local.json`, VSCode 터미널은 `.vscode/settings.json`으로 자동 지정된다(둘 다 git 제외). 저장소 안에 `.venv`가 생기면 잘못된 것이다.
 
 ## 규약
 - 좌표계: 저장·계산은 EPSG:5179, 웹 표시만 EPSG:4326
@@ -29,3 +30,4 @@ Korea Feature Manifold (KFM): 한국의 지형·인구·연결망을 비유클�
 
 ## 현재 단계
 0단계 + 0S 탐색 실험. 0S 판정 규칙(ADR 0010 2·5·6·7항, 0013) 채택 전에는 실데이터로 곡률·임베딩·δ를 계산하지 않는다.
+구현은 `docs/IMPLEMENTATION.md`의 세션 블록 단위로 진행한다. 맨 위 "진행 현황" 표에서 다음 세션을 확인하고, 세션이 끝나면 표를 갱신한다.
