@@ -28,7 +28,10 @@ build-backend = "uv_build"
 [tool.ruff]
 line-length = 100
 target-version = "py311"
-extend-exclude = ["docs"]   # 동결 문서(PLAN)와 ADR 채택 전 DESIGN.md를 포맷하지 않는다
+extend-exclude = [
+    "docs",             # 동결 문서(PLAN)와 ADR 채택 전 DESIGN.md를 포맷하지 않는다
+    "notebooks/spike",  # 0S 탐색 코드는 규칙 밖이다(PLAN 6.1a)
+]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
