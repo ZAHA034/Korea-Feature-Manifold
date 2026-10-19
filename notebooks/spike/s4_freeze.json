@@ -1,0 +1,479 @@
+{
+ "adr": "ADR 0010 2·5·6·7항(채택 2026-10-19 10:08 KST, 태그 0S-start), ADR 0013 4항. S4 실데이터 임베딩·δ·판정 전 사전 고정",
+ "config": {
+  "config_hash": "c2ae3329a5afc3d944bb26ba125c1ad4",
+  "embedding": {
+   "adam_lr": 0.05,
+   "adam_max_iter": 50000,
+   "adam_tol": 1e-06,
+   "adam_window": 200,
+   "dim": 2,
+   "fin_ftol": 1e-12,
+   "fin_gtol": 1e-10,
+   "fin_maxfun": 50000,
+   "fin_maxiter": 20000,
+   "flat_rtol": 0.001,
+   "init_halfwidth": 0.1,
+   "m1": 0.5,
+   "m2": 0.9,
+   "mds_max_norm": 0.14142135623730953,
+   "n_euc_u": 4,
+   "n_hyp_u": 3,
+   "n_worst": 20,
+   "r_max": 5.0,
+   "ratio_max": 0.8,
+   "resample_frac": 0.2,
+   "resample_scale": 5,
+   "retry_offsets": [
+    5,
+    10
+   ],
+   "tie_rtol": 1e-12
+  },
+  "lbfgsb_unspecified_by_adr": {
+   "gtol": 1e-10,
+   "maxfun": 50000,
+   "reason": "gtol 1e-10: ftol이 실제 종료 기준이 되게(S1b), maxfun 50,000: 기본 15,000은 maxiter보다 작다"
+  },
+  "m1": 0.5,
+  "m2": 0.9,
+  "precision": "float64, CPU 1스레드/프로세스, PYTORCH_JIT=0(재시작 결과가 호출 순서에 의존하지 않게), geoopt PoincareBall(c=1), torch.set_default_dtype(float64)",
+  "seed_rules": {
+   "attempt": "첫 시도 = 유클리드 5 + 쌍곡 5. 재실행분 = 쌍곡 U(±0.1) 재시작 3개(유클리드와 줄인 초기값 2개는 다시 돌리지 않음)",
+   "control_resample_rng": "np.random.default_rng([20261019, r]) (임베딩 재시작의 default_rng(seed)와 다른 난수열)",
+   "control_seeds": "r = 0, 1, 2, ... 연결 성분이 둘 이상이면 건너뛰고 연결된 20개를 모은다. 임베딩은 그중 앞 5개",
+   "euclid_restarts": "고전 MDS(최대 노름 0.1*sqrt(2)로 줄임) 1 + U(±0.1) 시드 0..3",
+   "judgement_restart": "마무리(L-BFGS-B)가 수렴한 재시작 중 상대 stress 최소. 없으면 보류. 평탄 극한·실패 판정의 최솟값은 수렴 여부와 무관",
+   "poincare_restarts": "유클리드 최소 stress 해를 무게중심 원점으로 옮긴 뒤 최대 노름 m1, m2로 줄인 2 + U(±0.1) 시드 0..2",
+   "retry": "그때까지 합친 모든 쌍곡 재시작의 최소 stress > 유클리드 최소 stress x (1 + 1e-3)이면 쌍곡의 U(±0.1) 재시작 3개만 U 시드에 +5, 그래도 실패면 +10을 더해 다시 돌린다(최대 2회). 쌍곡은 모든 시도의 재시작을 합쳐 판정하고 실패 판정은 시도마다 합친 쌍곡 최솟값으로 한다. 두 번 재실행해도 실패면 기록 '최적화 실패'·쌍곡 이점 '보류'",
+   "same_seed_same_init": "U 초기값 = np.random.default_rng(seed).uniform(-0.1, 0.1, (n, 2)). 같은 시드는 두 공간에서 같다"
+  }
+ },
+ "created": "2026-10-19",
+ "d_flow": {
+  "components": 1,
+  "edges": 6815,
+  "units": 247
+ },
+ "decisions_2026_10_19": {
+  "a_d_flow_units": "d_flow는 247개 단위(제주시·서귀포시 제외). ADR 0010 2항 보강: 통근·통학 OD처럼 바다를 건너는 일상 통행이 거의 없는 자료에서는 섬 연결 지역 중 본토와 양방향 통행이 없는 지역도 도서지역 제외로 미리 뺀다",
+  "b_retry": "재실행 규약(ADR 0013 4항 보강): 쌍곡 U(±0.1) 재시작 3개만 시드 +5, +10으로 최대 2회. 유클리드 결과와 줄인 초기값 2개는 그대로. 쌍곡은 모든 시도의 재시작을 합쳐 판정, 실패 판정은 시도마다 합친 쌍곡 최솟값. 실패·평탄 극한 구분은 수렴과 무관한 최소 stress",
+  "c_inputs": "임베딩 입력 14개(d_time 250·247, d_flow 주·대안, 대조군 앞 5개의 주·대안). d_time 249개 단위는 δ만. MAP 제외"
+ },
+ "environment": {
+  "env": "C:/dev/kfm-spike (numba는 S4에서 더함)",
+  "geoopt": "0.5.1",
+  "numba": "0.68.0",
+  "numpy": "2.4.6",
+  "pandas": "3.0.6",
+  "python": "3.11.9",
+  "scipy": "1.17.1",
+  "torch": "2.14.1+cpu"
+ },
+ "flow_exclusion": {
+  "island_dropped": [
+   {
+    "code": "50110",
+    "name": "제주특별자치도 제주시",
+    "reason": "도서지역 제외(ADR 0010 2항 보강): 쌍방향 통행 그래프에서 본토 성분 밖인 섬 연결 지역"
+   },
+   {
+    "code": "50130",
+    "name": "제주특별자치도 서귀포시",
+    "reason": "도서지역 제외(ADR 0010 2항 보강): 쌍방향 통행 그래프에서 본토 성분 밖인 섬 연결 지역"
+   }
+  ],
+  "rule": "ADR 0010 2항(2026-10-19 보강): 빠진 지역은 미리 빼고 기록. 통근·통학 OD처럼 바다를 건너는 일상 통행이 거의 없는 자료에서는 섬 연결 지역 중 본토와 양방향 통행이 없는 지역도 도서지역 제외로 미리 뺀다(제주시·서귀포시). 제외 허용 = 존 간 통행 없음, 또는 쌍방향 그래프 본토 성분 밖인 섬 연결 지역. 그 밖의 단절은 중단",
+  "unlinked_regions": []
+ },
+ "gravity": {
+  "beta_per_min": 0.10015664235142477,
+  "control_edges": [
+   5233,
+   5187,
+   5186,
+   5197,
+   5228,
+   5225,
+   5228,
+   5217,
+   5227,
+   5228,
+   5220,
+   5211,
+   5196,
+   5230,
+   5203,
+   5210,
+   5220,
+   5224,
+   5225,
+   5236
+  ],
+  "control_seeds": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19
+  ],
+  "furness_iter": 5261,
+  "mean_time_fit_min": 21.451213344467906,
+  "mean_time_obs_min": 21.451213344468414,
+  "n_eff": 1900388,
+  "resample_frac": 0.2,
+  "scale": 5,
+  "skipped_seeds": []
+ },
+ "inputs_md5": {
+  "g_adj249_edges.csv": "8951efa9c06edf309b87310aa879b29c",
+  "g_adj_edges.csv": "d7ca076e35cc7467c6c2ec40bd25b0d2",
+  "island_links.csv": "e8db8abad2580da7161f894488ae8ae8",
+  "od_DT_1PA2021_csv": "569f9db75e1193a425b15f20cf5b03bd",
+  "regions.parquet": "a3332dbfdb70789035036fe4c779894f",
+  "s3_freeze.json": "606589e75c0de2f725cd9212a8a31ca1",
+  "travel_time.parquet": "6a9e34cb0e305b7aa05a85149049e3d7"
+ },
+ "island_connected": {
+  "247": [
+   {
+    "code": "47940",
+    "name": "경상북도 울릉군"
+   }
+  ],
+  "249": [
+   {
+    "code": "47940",
+    "name": "경상북도 울릉군"
+   },
+   {
+    "code": "50110",
+    "name": "제주특별자치도 제주시"
+   },
+   {
+    "code": "50130",
+    "name": "제주특별자치도 서귀포시"
+   }
+  ],
+  "250": [
+   {
+    "code": "47940",
+    "name": "경상북도 울릉군"
+   },
+   {
+    "code": "50110",
+    "name": "제주특별자치도 제주시"
+   },
+   {
+    "code": "50130",
+    "name": "제주특별자치도 서귀포시"
+   }
+  ]
+ },
+ "observed_od": {
+  "source": "KOSIS DT_1PA2021 인구총조사 2020 통근·통학(12세 이상, 20% 표본 확대 추정치), 249개 단위(창원 의창+성산 합침), 존 내 통행 제외",
+  "units_247": {
+   "D_min": 82.0,
+   "O_min": 36.0,
+   "bidirectional_pairs": 6815,
+   "component_sizes": [
+    247
+   ],
+   "components": 1,
+   "inter_zone_sum": 9501939.0,
+   "n": 247,
+   "offdiag_cells": 60762,
+   "one_direction_only_pairs": 3622,
+   "zero_D": 0,
+   "zero_O": 0,
+   "zero_cell_frac": 0.716072545340838,
+   "zero_cells": 43510
+  },
+  "units_249": {
+   "D_min": 82.0,
+   "O_min": 36.0,
+   "bidirectional_pairs": 6816,
+   "component_sizes": [
+    247,
+    2
+   ],
+   "components": 2,
+   "inter_zone_sum": 9520502.0,
+   "intra_zone_sum": 18491785.0,
+   "n": 249,
+   "offdiag_cells": 61752,
+   "one_direction_only_pairs": 3623,
+   "total_incl_intra": 28012287.0,
+   "value_max": 40783.0,
+   "value_min_positive": 1.0,
+   "zero_D": 0,
+   "zero_O": 0,
+   "zero_cell_frac": 0.7205758517942739,
+   "zero_cells": 44497
+  }
+ },
+ "outputs_md5": {
+  "controls_T_247.npy": "8d7e651220ba255279015af06df96f71",
+  "controls_d_alt_247.npy": "58175e6ee9292b745c424dd961d80df8",
+  "controls_d_main_247.npy": "9793976d88b104b978280a051a0d81e3",
+  "controls_meta.json": "55b06d21589831259021d6c7d3643b56",
+  "d_flow_alt_247.npy": "7adadd99d1d43a9c79828e4fccedd869",
+  "d_flow_main_247.npy": "d5ad53a75d7a789bf50a07e20fda79c6",
+  "d_time_247.npy": "9010d0421e3ce36663aa969e729084ba",
+  "d_time_249.npy": "c37a5252182404d90819998f2e8fcae4",
+  "d_time_250.npy": "1c32dc4a5563501cdf00f4aacbf8f09f",
+  "embed_lib.py": "bf008d3a8e1a642d6c3aa7253eed66a0",
+  "gravity_expected_247.npy": "55a4bd6b258d03a053cac524bec9e6f4",
+  "od_247.npy": "853122e0a715228dc899e3ce6a38b13a",
+  "od_249.npy": "c12e766975836de5c3219db11d1b862a",
+  "t_dir_247.npy": "7d0d91b4a36760d5c35e45c3e4d473a8",
+  "t_dir_249.npy": "f65e08526c8fc7b34bebf53a888698e7",
+  "t_dir_250.npy": "f90e287eb1d1480353772782712275ac",
+  "units_247.csv": "bcf95828f1ce2c8c3c67a912b0019cc4",
+  "units_249.csv": "df6b2f56918e33f2cd80def7328734ce",
+  "units_250.csv": "2ac0bada395e5862791013eb72d20ffb"
+ },
+ "rules": {
+  "delta": "서로 다른 네 점, delta = max (S1-S2)/2 (기준점별 (max,min) 행렬곱, 정확값), delta_rel = 2 delta / diam, delta_bar = mean (S1-S2)/(S1-S3) (세 합이 같으면 0, 상대 오차 1e-12 이내)",
+  "flat_limit": "쌍곡 최소 stress가 유클리드 최소 stress의 1~(1+1e-3)배: '쌍곡 이점 없음(평탄 극한)'(수렴 불필요). 그보다 크면 최적화 실패 -> 쌍곡 U 재시작 3개만 시드 +5, +10으로 최대 2회 재실행(유클리드·줄인 초기값은 그대로), 쌍곡은 모든 시도를 합쳐 판정, 실패 판정은 시도마다 합친 쌍곡 최솟값 -> 두 번 재실행해도 실패면 '최적화 실패'·보류",
+  "hierarchy": "delta_bar(d_flow) < 대조군 20개 모두. 주·대안 정규화 각각, 전체·섬 제외 각각(4개 조건)",
+  "hyperbolic_advantage": "마무리 수렴 재시작 중 상대 stress 최소의 평균 상대 왜곡 비(쌍곡/유클리드) <= 0.8. d_flow는 대조군 5개 비의 최솟값보다 작아야 한다. 대조군 중 하나라도 판정 재시작이 없으면 보류",
+  "subsets": "부분집합은 전체 행렬의 부분행렬(폐포 다시 안 함). 섬 제외 = G_adj에서 섬 링크 엣지를 뺐을 때 본토 밖 지역"
+ },
+ "run_real_when_frozen": false,
+ "session": "S4 1부 (0S-4 임베딩·δ·d_flow·중력 대조군 코드, 합성 검산, 입력 거리 행렬 준비)",
+ "synthetic_checks": {
+  "3절 배선: δ 표 6행, 대조군 δ̄ 4가지, 임베딩 7개, 판정, 저장 파일": {
+   "n_files": 39,
+   "ok": true
+  },
+  "d_flow 쌍곡 이점: 대조군 중 하나라도 판정 재시작이 없으면 보류": {
+   "ok": true
+  },
+  "d_flow 쌍곡 이점: 비 <= 0.8이고 대조군 비의 최솟값보다 작아야 한다": {
+   "ok": true
+  },
+  "fit_gravity: 알려진 β 복원 (대칭 통행시간)": {
+   "beta": 0.08,
+   "furness_iter": 29,
+   "mean_time": 20.46864,
+   "ok": true
+  },
+  "fit_gravity: 알려진 β 복원 (비대칭 방향 통행시간)": {
+   "beta": 0.06,
+   "mean_time_fit": 22.434208,
+   "mean_time_obs": 22.434208,
+   "ok": true
+  },
+  "flow_exclusion: 섬 연결 지역만 제외, 그 밖은 중단, 통행이 전혀 없는 지역은 목록으로": {
+   "ok": true
+  },
+  "gravity_grid: ℓ_sym, ℓ′ >= 0": {
+   "min_alt": 1.582789,
+   "min_main": 1.689488,
+   "ok": true
+  },
+  "gravity_grid: 폐포 전 ℓ_sym의 δ = β·δ(d_sym), δ̄ 같음": {
+   "beta_delta": 1.988225,
+   "delta_bar_d": 0.324409,
+   "delta_bar_raw": 0.324409,
+   "delta_raw": 1.988225,
+   "ok": true
+  },
+  "gravity_grid: 폐포 후 삼각 부등식": {
+   "ok": true,
+   "violation_alt": 0.0,
+   "violation_main": 0.0
+  },
+  "make_controls: 연결 성분이 둘 이상인 시드를 건너뛰고 연결된 대조군만 모은다": {
+   "control_seeds": [
+    0,
+    1,
+    5,
+    7,
+    8,
+    10
+   ],
+   "ok": true,
+   "skipped_seeds": [
+    2,
+    3,
+    4,
+    6,
+    9
+   ]
+  },
+  "numba = 파이썬 반복 (c4)": {
+   "delta": 1.0,
+   "delta_bar": 1.0,
+   "ok": true
+  },
+  "numba = 파이썬 반복 (tree 깊이 3 n=15)": {
+   "delta": 0.0,
+   "delta_bar": 0.0,
+   "ok": true
+  },
+  "numba = 파이썬 반복 (메트릭 n=14)": {
+   "delta": 1.068622,
+   "delta_bar": 0.345256,
+   "ok": true
+  },
+  "numba = 파이썬 반복 (임의 대칭 n=13)": {
+   "delta": 4.863044,
+   "delta_bar": 0.501896,
+   "ok": true
+  },
+  "tree 판정: 쌍곡 이점 있음, 비 0.2253, 수렴 5/5, 시도 1회": {
+   "n_at_cap": 4,
+   "ok": true,
+   "ratio": 0.225306,
+   "stress_ratio": 0.057855
+  },
+  "tree: S1b 값 재현 (쌍곡 0.03394, 유클리드 0.15063, 비 0.2253)": {
+   "euc_min": 0.150633,
+   "hyp_min": 0.033938,
+   "max_diff_vs_S1b": 1e-06,
+   "ok": true,
+   "ratio": 0.225306
+  },
+  "tree: torch/geoopt 왜곡 = 독립 numpy 구현": {
+   "max_diff": 0.0,
+   "ok": true
+  },
+  "δ fixture c4: δ_rel = 1": {
+   "delta_bar": 1.0,
+   "delta_rel": 1.0,
+   "ok": true
+  },
+  "δ fixture square4: δ_rel = 2 - sqrt(2)": {
+   "delta_bar": 1.0,
+   "delta_rel": 0.585786,
+   "ok": true
+  },
+  "δ fixture tree: δ = δ̄ = 0": {
+   "n_quads": 31465,
+   "n_ties": 2656,
+   "ok": true
+  },
+  "δ·δ̄ 불변: 무작위 거리(삼각 부등식 성립)에 g_i + g_j": {
+   "delta": 0.996915,
+   "delta_bar": 0.348508,
+   "delta_bar_g": 0.348508,
+   "delta_g": 0.996915,
+   "ok": true
+  },
+  "δ·δ̄ 불변: 임의의 대칭 거리(삼각 부등식 없음)에 g_i + g_j": {
+   "delta": 6.228914,
+   "delta_bar": 0.501392,
+   "delta_bar_g": 0.501392,
+   "delta_g": 6.228914,
+   "ok": true
+  },
+  "ℓ′ = ℓ_sym + h_i + h_j - log 2 - log(AM/GM) (ADR 0010 2항 관계식)": {
+   "max_abs_err": 0.0,
+   "ok": true
+  },
+  "관측 모드는 추정 OD를 거부, 대조군 모드(role=None)는 받음": {
+   "ok": true
+  },
+  "기준점 (max, min) 행렬곱 δ = 네 점 전체 δ (메트릭 n=30)": {
+   "ok": true
+  },
+  "기준점 (max, min) 행렬곱 δ = 네 점 전체 δ (메트릭 n=60)": {
+   "ok": true
+  },
+  "기준점 방식은 삼각 부등식이 깨진 거리를 거부한다": {
+   "ok": true
+  },
+  "보류: 한 공간에 마무리가 수렴한 재시작이 없다": {
+   "ok": true
+  },
+  "실패 판정은 시도마다 합친 쌍곡 최솟값으로: 12 -> 10.5 (실패) -> 10.005 (성공, 평탄 극한)": {
+   "ok": true
+  },
+  "쌍곡 이점 문턱 0.8: 비 0.5 있음, 비 0.9 없음, 수렴하지 않은 더 작은 stress는 판정에 쓰지 않음": {
+   "ok": true
+  },
+  "쌍곡은 모든 시도의 재시작을 합쳐 판정: 첫 시도 실패(11 > 10.01), 합친 최솟값 9 -> 성공, 판정 재시작은 첫 시도의 수렴한 11": {
+   "ok": true
+  },
+  "연결 성분이 둘 이상이면 오류": {
+   "ok": true
+  },
+  "자식 프로세스 결과 = 직렬 결과(같은 시드)": {
+   "ok": true
+  },
+  "재시작 구성: 유클리드 MDS + U 0..3, 쌍곡 U 0..2 + 줄인 초기값 m1, m2": {
+   "ok": true
+  },
+  "재실행: 두 번 재실행해도 실패 -> 기록 '최적화 실패', 쌍곡 이점 '보류', 쌍곡 U 시드 +5, +10, 합친 쌍곡 11개": {
+   "ok": true
+  },
+  "재실행: 실패 -> 쌍곡 U 재시작 3개만 시드 +5로 다시 돌린다(유클리드 5, 줄인 초기값 2는 그대로), 합친 쌍곡 8개로 판정": {
+   "ok": true
+  },
+  "재표본: 관측의 0 패턴 적용 (총량은 0 패턴 때문에 5 x 총량보다 작다)": {
+   "ok": true
+  },
+  "재표본: 총량 = round(0.2 x 존 간 합) x 5, 5의 배수, 대각 0, 시드마다 다름, 같은 시드는 같음, 임베딩과 다른 난수열": {
+   "n_eff": 90864,
+   "ok": true,
+   "total": 454320.0
+  },
+  "중력모형 이상의 위계: 4개 조건 모두 대조군 20개보다 작아야 한다(하나라도 같거나 크면 아님)": {
+   "ok": true
+  },
+  "중력모형 이상의 위계: 대조군이 20개가 아니면 오류": {
+   "ok": true
+  },
+  "평탄 극한: 쌍곡 최솟값이 유클리드 x (1 + 1e-3) 이내이면 '쌍곡 이점 없음(평탄 극한)', 재실행 없음, 수렴 불필요": {
+   "ok": true
+  },
+  "폐포 = scipy shortest_path (희소 OD, 폐포로 줄어든 엣지가 있음)": {
+   "edges": 89,
+   "ok": true,
+   "seed": 0,
+   "shortened_edges": 1
+  },
+  "한 방향이라도 0이면 엣지 없음": {
+   "ok": true
+  }
+ },
+ "units": {
+  "d_flow": 247,
+  "d_time_247": 247,
+  "d_time_249": 249,
+  "d_time_250": 250,
+  "embedded_inputs": [
+   "d_flow_alt",
+   "d_flow_main",
+   "d_time_247",
+   "d_time_250",
+   "ctrl_main_0",
+   "ctrl_main_1",
+   "ctrl_main_2",
+   "ctrl_main_3",
+   "ctrl_main_4",
+   "ctrl_alt_0",
+   "ctrl_alt_1",
+   "ctrl_alt_2",
+   "ctrl_alt_3",
+   "ctrl_alt_4"
+  ]
+ }
+}
