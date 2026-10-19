@@ -27,7 +27,8 @@ Korea Feature Manifold (KFM): 한국의 지형·인구·연결망을 비유클�
 - 밀도 적응 배분에는 항상 최소 하한 `n_min`을 적용한다(DESIGN.md 7.3).
 - 설계 변경 시 `docs/decisions/`에 결정 기록을 추가하고 DESIGN.md를 갱신한다.
 - `docs/PLAN.md`는 v0.3에서 동결했다. 계획 변경은 `docs/decisions/`의 ADR로만 하고 PLAN 본문은 고치지 않는다.
+- OSM으로 만든 표·그림·통행시간을 저장소에 넣거나 공개할 때는 "© OpenStreetMap contributors"와 ODbL 1.0 고지를 달고 `NOTICE.md`를 갱신한다.
 
 ## 현재 단계
-0단계 + 0S 탐색 실험. 0S 판정 규칙(ADR 0010 2·5·6·7항, 0013) 채택 전에는 실데이터로 곡률·임베딩·δ를 계산하지 않는다.
+0단계 골격(트랙 B). 다음 세션은 P2(ADR 작성)다. 0S 탐색 실험은 2026-10-19에 끝났다(태그 `0S-end`, 판단 "조정", `docs/reports/0S-spike.md`). 2단계 착수 전에 0S 결과로 ADR 0009(그래프 정의·엣지 길이)를 고친다. `notebooks/spike/`의 0S 코드는 kfm 패키지·runs·테스트 규칙 밖이다.
 구현은 `docs/IMPLEMENTATION.md`의 세션 블록 단위로 진행한다. 맨 위 "진행 현황" 표에서 다음 세션을 확인하고, 세션이 끝나면 표를 갱신한다.

@@ -39,7 +39,7 @@
 - κ_ex 상위 20개: 망 단절 16, 기타 4, 자연 장벽 0, 데이터·설정 문제 0. 1위는 제주시–서귀포시(0.938)
 - 보조: 백두대간 선 교차 엣지 검정은 실패(ρ 0.057, p 0.076)했고, h_e와는 음의 상관이다. 옆 엣지 평균 κ_ex는 −0.015로 교차 엣지(0.035)보다 낮다(예상 방향)
 - 자연 장벽 엣지 수: κ_ex 상위 20개 중 0/20(백두대간 선 교차 기준)이다. h_e 상위 10%를 장벽으로 보면 2/20(초기하 p 0.614)이다
-- 산출물: `notebooks/spike/02_curvature.ipynb`, `s3_results.json`, `s3_outputs/`(표). 그림은 `s3_outputs/figures/`의 `map_kappa.png`, `map_kappa_ex_top20.png`(상위 20개와 5분류), `map_kappa_bottom20.png`(κ 하위 20개)다
+- 산출물: `notebooks/spike/02_curvature.ipynb`, `s3_results.json`, `s3_outputs/`(표). 그림은 `s3_outputs/figures/`의 `map_kappa.png`, `map_kappa_ex_top20.png`(상위 20개와 5분류), `map_kappa_bottom20.png`(κ 하위 20개)다. `map_kappa.png` 제목의 "붉을수록 병목"은 DESIGN 6.4의 옛 해석으로, 통행시간 길이에서는 성립하지 않는다(위 시사점 첫 항목)
 
 ### 임베딩과 δ(0S-4)
 - 쌍곡 이점: 세 입력 모두 **없음**. 2차원 평균 상대 왜곡 비(쌍곡 / 유클리드)는 `d_time` 250개 0.979, `d_time` 247개 0.979, `d_flow`(주 정규화) 0.913이다. `d_flow`는 대조군 5개 비의 최솟값(0.999)보다 작지만 기준 0.8을 넘는다(대안 정규화 0.941). 최적화 실패·보류·재실행은 0건이고, 판정 재시작은 모두 수렴했다

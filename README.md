@@ -2,7 +2,7 @@
 
 한국의 지형·인구·연결망을 하나의 데이터 구조와 기하 구조로 묶은 국토 분석 기준선(baseline) 프레임워크다.
 통행시간 준거리, 이산 곡률, 푸앵카레 임베딩으로 지역 간 연결 구조를 분석하고, 모든 분석을 기준선 대비 변화량으로 보고한다.
-현재 0단계(골격)와 0S 탐색 실험을 진행 중이다.
+현재 0단계(골격)를 진행 중이다. 0S 탐색 실험은 2026-10-19에 끝났다([보고서](docs/reports/0S-spike.md)).
 
 ## 설치
 
@@ -30,3 +30,5 @@ uv run ruff check . && uv run ruff format .
 - 실행 계획(v0.3 동결): [docs/PLAN.md](docs/PLAN.md)
 - 설계 결정 기록(ADR): [docs/decisions/](docs/decisions/)
 - 작업 규약: [CLAUDE.md](CLAUDE.md)
+- 0S 탐색 실험 보고서: [docs/reports/0S-spike.md](docs/reports/0S-spike.md)
+- 자료 출처와 라이선스 고지(OpenStreetMap ODbL 포함): [NOTICE.md](NOTICE.md)
