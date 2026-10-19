@@ -1,0 +1,4 @@
+﻿unit_code,name,node_id,connector_m,flag_far_gt5km,node_inside_own,node_dist_to_own_m,node_host_unit,flag_outside_own,nearest_node_in_main,d_nearest_any_m,flag_fragment,error
+11440,서울특별시 마포구,1830388295,76.85220629698267,False,True,0.0,11440,False,False,74.86106780600181,True,False
+11590,서울특별시 동작구,2824550268,166.43084733135655,False,True,0.0,11590,False,False,98.63141123191605,True,False
+26260,부산광역시 동래구,1780058795,54.29984772058703,False,True,0.0,26260,False,False,12.609920564919728,True,False

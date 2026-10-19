@@ -1,0 +1,390 @@
+{
+ "adr": "0013 (2026-10-19 18:17 KST 개정) 7항 사전 고정",
+ "config": {
+  "alpha": 0.5,
+  "bridge_rule": "within_way + chain",
+  "bridge_sea_condition": "candidate needs >= 1 unlabeled (outside region union) node between the two land labels, or the segment between neighbouring labeled nodes passes outside the union",
+  "bridge_tag_fallback": true,
+  "coastal_outline": "exterior rings of union of region polygons (holes excluded)",
+  "connector_long_m": 5000.0,
+  "data_problem_majority": 11,
+  "dem": {
+   "block_m": 250.0,
+   "block_resampling": "average (GDAL warp, EPSG:4326 -> EPSG:5179)",
+   "grid_margin_m": 5000.0,
+   "he_formula": "max elevation on segment - max(endpoint elevations)",
+   "he_lookup": "nearest 90 m pixel",
+   "he_step_m": 100.0,
+   "nodata_fill": "linear interpolation along the segment",
+   "sea_mask": "outside union of region polygons",
+   "slope_formula": "sum|dz| / 2 / length_km (m/km)",
+   "slope_lookup": "nearest 250 m cell",
+   "slope_step_m": 250.0,
+   "source": "Copernicus GLO-90 (35 tiles)"
+  },
+  "island_factors": [
+   0.5,
+   2.0
+  ],
+  "min_shared_boundary_m": 50.0,
+  "n_jackknife_groups": 17,
+  "node_matching": {
+   "error": "connector > 5 km or connected node outside own sigungu polygon",
+   "note_only": "nearest node not in main component"
+  },
+  "od": {
+   "flow": "T_xz + T_zx (zone-internal excluded)",
+   "merged_d_sym": "population-weighted mean of sub-region pair d_sym (pop_2025_12)",
+   "merged_position": "population-weighted mean of sub-origins",
+   "merged_units": "창원 의창구(48121)+성산구(48123) -> 249 units",
+   "zero_flow_epsilon_persons": 1.0
+  },
+  "p_threshold": 0.05,
+  "top_k": 20,
+  "validity_threshold": 0.1
+ },
+ "created": "2026-10-19",
+ "expected_bridge_pairs": [
+  {
+   "G_adj에서": "경계 공유 2,243 m",
+   "구분": "필수",
+   "쌍": "인천대교: 인천 중구 - 연수구"
+  },
+  {
+   "G_adj에서": "경계 공유 10,597 m",
+   "구분": "필수",
+   "쌍": "강화 - 김포"
+  },
+  {
+   "G_adj에서": "연륙·연도교(규칙 both)",
+   "구분": "필수",
+   "쌍": "고흥 - 여수"
+  },
+  {
+   "G_adj에서": "연륙·연도교(규칙 both)",
+   "구분": "예상",
+   "쌍": "거제 - 통영"
+  },
+  {
+   "G_adj에서": "연륙·연도교(규칙 chain) <- 지시 원문 규칙 A로는 못 잡음",
+   "구분": "예상",
+   "쌍": "거제 - 부산 강서"
+  },
+  {
+   "G_adj에서": "연륙·연도교(규칙 both)",
+   "구분": "예상",
+   "쌍": "남해 - 하동"
+  },
+  {
+   "G_adj에서": "연륙·연도교(규칙 chain) <- 지시 원문 규칙 A로는 못 잡음",
+   "구분": "예상",
+   "쌍": "진도 - 해남"
+  },
+  {
+   "G_adj에서": "연륙·연도교(규칙 within_way)",
+   "구분": "예상",
+   "쌍": "완도 - 해남"
+  },
+  {
+   "G_adj에서": "연륙·연도교(규칙 both)",
+   "구분": "예상",
+   "쌍": "신안 - 목포"
+  },
+  {
+   "G_adj에서": "경계 공유 5,649 m",
+   "구분": "예상",
+   "쌍": "신안 - 무안"
+  },
+  {
+   "G_adj에서": "연륙·연도교(규칙 chain) <- 지시 원문 규칙 A로는 못 잡음",
+   "구분": "예상",
+   "쌍": "보령 - 태안"
+  },
+  {
+   "G_adj에서": "연륙·연도교(규칙 both)",
+   "구분": "예상",
+   "쌍": "군산 - 부안"
+  }
+ ],
+ "g_adj": {
+  "b_baekdu_boundary_edges": 30,
+  "b_sens_boundary_edges": 135,
+  "boundary": 638,
+  "bridge": 22,
+  "bridge_pairs_rule_A": 13,
+  "bridge_pairs_rule_B_only": 9,
+  "bridge_sea_condition": {
+   "basis_pair_counts": {
+    "bridge_tag": 1,
+    "nodes": 18,
+    "segment": 3
+   },
+   "dropped": [
+    "대구광역시 수성구 - 대구광역시 달서구"
+   ],
+   "kept_by_bridge_tag": [
+    "부산광역시 중구 - 부산광역시 영도구"
+   ],
+   "pairs_after": 22,
+   "pairs_before": 23
+  },
+  "degree_max": 11,
+  "degree_median": 5.0,
+  "degree_min": 1,
+  "edges": 663,
+  "island": 3,
+  "nodes": 250,
+  "sea_frac_gt_half_boundary_edges": 1,
+  "sp_shorter_dsym": 0,
+  "sp_shorter_geo": 0
+ },
+ "g_adj249": {
+  "edges": 660,
+  "flow_zero_pairs": 5,
+  "kinds": {
+   "boundary": 635,
+   "bridge": 22,
+   "island": 3
+  },
+  "nodes": 249
+ },
+ "gpx_connection": {
+  "course_track_length_sum_km": 687.047,
+  "courses_per_range": {
+   "1": 7,
+   "2": 8,
+   "3": 8,
+   "4": 7,
+   "5": 8,
+   "6": 6,
+   "7": 8
+  },
+  "gap_total_km": 7.522,
+  "gpx_has_listed_course_distance": false,
+  "line_km": 694.569,
+  "max_gap_between": [
+   "속리산권 6코스",
+   "속리산권 7코스"
+  ],
+  "max_gap_m": 3880.3,
+  "n_courses": 52,
+  "n_gap_gt_1km": 2,
+  "n_gaps": 51
+ },
+ "inputs_md5": {
+  "baekdudaegan_gpx_zip": "589f1018209a8d67a6b0d88ddd2cfb01",
+  "baekdudaegan_line.parquet": "f7a9ceefcea3864ca88d94769cb0a5ff",
+  "baekdudaegan_line_xy_float64": "4fed621ef0021959863bcfa01b5fbe8d",
+  "dem_250m_block_mean_float32_array": "cdcc7613ee5bfe3e5abdaf8a26e347e0",
+  "dem_mosaic_float32_array": "a1d35db4fa5ebb1863cef9108b49f8cd",
+  "dem_tiles": {
+   "Copernicus_DSM_COG_30_N33_00_E126_00_DEM.tif": "0fc3766b44900952a4554546ba612ecf",
+   "Copernicus_DSM_COG_30_N33_00_E128_00_DEM.tif": "bcce3e2b0053753ec81cdeab30f8cbaa",
+   "Copernicus_DSM_COG_30_N33_00_E129_00_DEM.tif": "925e69b641c8265adcce8654e5f2509e",
+   "Copernicus_DSM_COG_30_N33_00_E130_00_DEM.tif": "d227ed44f5f0fce36886a6a023dd379c",
+   "Copernicus_DSM_COG_30_N33_00_E131_00_DEM.tif": "aea0c8f4c9e5f4b19d311f8947bcb35c",
+   "Copernicus_DSM_COG_30_N34_00_E125_00_DEM.tif": "ca5f757ff5f718fffdf2eca1f9a7ca3d",
+   "Copernicus_DSM_COG_30_N34_00_E126_00_DEM.tif": "975b24ebd2fcb07e247e3199e915fa56",
+   "Copernicus_DSM_COG_30_N34_00_E127_00_DEM.tif": "129752478b873c1060aa7cb3c10263c6",
+   "Copernicus_DSM_COG_30_N34_00_E128_00_DEM.tif": "71eb6c980921c93904ce491792b9d9c5",
+   "Copernicus_DSM_COG_30_N34_00_E129_00_DEM.tif": "ff35acbd4fcc96d561a5ade111473535",
+   "Copernicus_DSM_COG_30_N34_00_E130_00_DEM.tif": "6380e14a49a151128ff607891529989b",
+   "Copernicus_DSM_COG_30_N34_00_E131_00_DEM.tif": "dbcd65d46d32d6ab156080944d9a01ba",
+   "Copernicus_DSM_COG_30_N35_00_E125_00_DEM.tif": "406f2463dfd488ed8af166f5c2f5b7dd",
+   "Copernicus_DSM_COG_30_N35_00_E126_00_DEM.tif": "d9d00c39b4e0bb2edfa04a523bef44c6",
+   "Copernicus_DSM_COG_30_N35_00_E127_00_DEM.tif": "ecf071f0cad30bab5a6e002d415292b8",
+   "Copernicus_DSM_COG_30_N35_00_E128_00_DEM.tif": "337f02201c016ab7c1dd55ab302ff7b2",
+   "Copernicus_DSM_COG_30_N35_00_E129_00_DEM.tif": "7dcdeba04e15a42460cf04ef698c8c6a",
+   "Copernicus_DSM_COG_30_N36_00_E125_00_DEM.tif": "49ab9ba879f9bb2ba36647bd8251c427",
+   "Copernicus_DSM_COG_30_N36_00_E126_00_DEM.tif": "0ae13fde2d81a3503aa947c2f158584d",
+   "Copernicus_DSM_COG_30_N36_00_E127_00_DEM.tif": "98168a3e1adc8808364145c80e4e584a",
+   "Copernicus_DSM_COG_30_N36_00_E128_00_DEM.tif": "1e00cb4fa89b63bd11900c41c95ef2d1",
+   "Copernicus_DSM_COG_30_N36_00_E129_00_DEM.tif": "f28b6b098f817031b6b3e4175ebeb06b",
+   "Copernicus_DSM_COG_30_N37_00_E124_00_DEM.tif": "01daf585ac14f20731896448107c2a9d",
+   "Copernicus_DSM_COG_30_N37_00_E125_00_DEM.tif": "157af1af50ebcbba7125a9b7c5793e77",
+   "Copernicus_DSM_COG_30_N37_00_E126_00_DEM.tif": "789cb07f73f8c80a1c50dc7723d111d7",
+   "Copernicus_DSM_COG_30_N37_00_E127_00_DEM.tif": "c1e152aa4f7ef7de4caf33502f9d3c96",
+   "Copernicus_DSM_COG_30_N37_00_E128_00_DEM.tif": "47018afcbaed6316e61ad463ba64bb54",
+   "Copernicus_DSM_COG_30_N37_00_E129_00_DEM.tif": "d9bf51761b9b62bc65d250c37db1a840",
+   "Copernicus_DSM_COG_30_N37_00_E130_00_DEM.tif": "614531a46486efcaee0017af8f21aab4",
+   "Copernicus_DSM_COG_30_N37_00_E131_00_DEM.tif": "68811b3f7b4c0a4a47181ef1b21940c1",
+   "Copernicus_DSM_COG_30_N38_00_E124_00_DEM.tif": "ffaa5d0d040b7137059de20dd21c7ee2",
+   "Copernicus_DSM_COG_30_N38_00_E125_00_DEM.tif": "3421e00b122d2a388bbca1b1b451f740",
+   "Copernicus_DSM_COG_30_N38_00_E126_00_DEM.tif": "13f6a6782c44e104c1179bd416960719",
+   "Copernicus_DSM_COG_30_N38_00_E127_00_DEM.tif": "5d27f35068dcdeee2ee2e4aa026cc888",
+   "Copernicus_DSM_COG_30_N38_00_E128_00_DEM.tif": "349f4c68447d0a4862b8e64e0b61c187"
+  },
+  "dem_tiles_n": 35,
+  "island_links.csv": "e8db8abad2580da7161f894488ae8ae8",
+  "od_DT_1PA2021_csv": "569f9db75e1193a425b15f20cf5b03bd",
+  "origin_nodes.parquet": "a157dbfb085fe110cc6b97dd2dba7475",
+  "origins.parquet": "0ca4ca981f4e2f4092101799c6fa72df",
+  "osm_baekdu_relation_ways_coords_md5": "2718b66a38ed54a8f83e4fbf1e6e1939",
+  "osm_jeongmaek_ways_coords_md5": "b9196c88224829cffa57463224dd8092",
+  "osm_pbf": "355b718187224e6f85c7fd5b911c108f",
+  "regions.parquet": "a3332dbfdb70789035036fe4c779894f",
+  "road_edges.parquet": "0a80f79cc38871537394ee549fb027bc",
+  "road_nodes.parquet": "4ac510ba71f390ae0081cb2a8a1a0f91",
+  "travel_time.parquet": "6a9e34cb0e305b7aa05a85149049e3d7",
+  "travel_time_island_x0.5.parquet": "7c751dfda0866f9ee371835db5f65746",
+  "travel_time_island_x2.parquet": "8c3c4ca4764162eb3256c085961e9617"
+ },
+ "island_edges": [
+  {
+   "from": "김포국제공항 국내선청사",
+   "link_min": 135.0,
+   "mode": "air",
+   "to": "제주국제공항",
+   "u_region": "서울특별시 강서구",
+   "v_region": "제주특별자치도 제주시"
+  },
+  {
+   "from": "완도연안여객선터미널(완도항)",
+   "link_min": 190.0,
+   "mode": "ferry",
+   "to": "제주항연안여객터미널",
+   "u_region": "전라남도 완도군",
+   "v_region": "제주특별자치도 제주시"
+  },
+  {
+   "from": "포항여객선터미널",
+   "link_min": 200.0,
+   "mode": "ferry",
+   "to": "울릉항여객선터미널(사동)",
+   "u_region": "경상북도 포항시 북구",
+   "v_region": "경상북도 울릉군"
+  }
+ ],
+ "island_scenario_changed_edges": 3,
+ "matrix_check": {
+  "rebuilt_base_vs_S2_max_abs_diff_min": 3.410605131648481e-13
+ },
+ "node_matching": {
+  "checked": 250,
+  "errors": 0,
+  "far_gt_5km": 0,
+  "fragment_notes": 3,
+  "outside_own_sigungu": 0
+ },
+ "outputs_md5": {
+  "bridges.csv": "2eb98aaa57612665b6c18467b62db46b",
+  "curvature_lib.py": "2bf9c3aa14103e0233f2b7679028ba3a",
+  "g_adj249_edges.csv": "8951efa9c06edf309b87310aa879b29c",
+  "g_adj_edges.csv": "d7ca076e35cc7467c6c2ec40bd25b0d2",
+  "island_links.csv": "e8db8abad2580da7161f894488ae8ae8",
+  "node_matching.csv": "4d6e71b1b39168e11a3e3ec25d1c72fb"
+ },
+ "run_real_curvature_when_frozen": false,
+ "sensitivity_line": {
+  "missing_in_osm": [
+   "한남정맥"
+  ],
+  "osm_jeongmaek_relations": [
+   {
+    "length_km": 141.3,
+    "n_ways": 101,
+    "name": "금남정맥",
+    "relation_id": 19161069
+   },
+   {
+    "length_km": 73.1,
+    "n_ways": 67,
+    "name": "금남호남정맥",
+    "relation_id": 18716489
+   },
+   {
+    "length_km": 304.2,
+    "n_ways": 308,
+    "name": "금북정맥",
+    "relation_id": 19257371
+   },
+   {
+    "length_km": 251.0,
+    "n_ways": 246,
+    "name": "낙남정맥",
+    "relation_id": 19179556
+   },
+   {
+    "length_km": 434.8,
+    "n_ways": 210,
+    "name": "낙동정맥",
+    "relation_id": 15597750
+   },
+   {
+    "length_km": 168.5,
+    "n_ways": 114,
+    "name": "한남금북정맥",
+    "relation_id": 17448393
+   },
+   {
+    "length_km": 174.1,
+    "n_ways": 267,
+    "name": "한북정맥",
+    "relation_id": 17461355
+   },
+   {
+    "length_km": 482.5,
+    "n_ways": 358,
+    "name": "호남정맥",
+    "relation_id": 18698158
+   }
+  ]
+ },
+ "session": "S3 1부 (0S-3 입력 준비와 판정 코드, 실데이터 곡률 계산 전)",
+ "speed_factor_c": 1.0527350132426199,
+ "synthetic_checks": {
+  "all_passed": true,
+  "decision": {
+   "계속: 데이터·설정 문제 10개(과반 아님)": "계속",
+   "계속: 두 검정 통과": "계속",
+   "미완: 검정 p가 NaN": "미완",
+   "미완: 섬 링크 민감도 수치 없음": "미완",
+   "부분 대응: 1단계 점검이 양수가 아님": "부분 대응",
+   "부분 대응: OD 가중에서만 통과": "부분 대응",
+   "부분 대응: jackknife p가 0.05 이상이면 주 검정 실패 + OD 미계산": "부분 대응",
+   "부분 대응: 주 검정만 통과(편상관 실패)": "부분 대응",
+   "전제 재검토: 주·OD 실패 + 1단계 점검 양수": "전제 재검토",
+   "조정: 데이터·설정 문제 11개(과반)": "조정",
+   "조정: 섬 링크 ×2에서 편상관 통과 여부 뒤집힘": "조정",
+   "조정: 유효성 점검 실패": "조정"
+  },
+  "helpers": {
+   "bridge_detect_toy": "ok",
+   "bridge_sea_condition_toy": "ok",
+   "dem_profile": "ok",
+   "gpx_connect": "ok",
+   "toy_pipeline_dry_run": "ok"
+  },
+  "orc": {
+   "C5": 0.25,
+   "C8": 0.0,
+   "Kn_max_abs_err": 1.1102230246251565e-16,
+   "barbell_bridge": -0.6,
+   "barbell_bridge_is_unique_min": true,
+   "barbell_far12": 0.625,
+   "barbell_near8": 0.425,
+   "bridge_length_L_1_2_4_8_32": [
+    -0.6,
+    -0.2,
+    0.0,
+    0.1,
+    0.175
+   ],
+   "bridge_length_max_abs_err": 4.440892098500626e-16,
+   "emd2_vs_linprog_barbell_max_abs_diff": 4.440892098500626e-16
+  },
+  "stats": {
+   "common_cause_partial_rho": 0.0758124537954465,
+   "common_cause_raw_rho": 0.7923705773161082,
+   "jackknife_toy": {
+    "matches_independent_loop": true,
+    "p_jack_max": 0.8855781775275469,
+    "p_simple": 0.0011376516272038454,
+    "worst_group": 0
+   },
+   "partial_p_vs_beta_function_abs_diff": 0.0,
+   "partial_vs_formula_and_precision_matrix_max_abs_diff": 5.551115123125783e-17
+  },
+  "tolerance": 1e-09
+ }
+}
