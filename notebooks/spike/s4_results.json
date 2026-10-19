@@ -1,0 +1,2126 @@
+{
+ "created_from": "C:\\dev\\kfm-data\\spike\\s4\\s4_real",
+ "git_head_at_run": "c901dae2f54f814141dacd5e86b2d2cf1a8ba422",
+ "config_hash": "c2ae3329a5afc3d944bb26ba125c1ad4",
+ "embed_lib_md5": "bf008d3a8e1a642d6c3aa7253eed66a0",
+ "embedding": {
+  "d_time_250": {
+   "n": 250,
+   "record": "쌍곡 이점 없음",
+   "advantage": "쌍곡 이점 없음",
+   "reason": "평균 상대 왜곡 비 0.9792 (문턱 0.8)",
+   "distortion_hyp": 0.07160600142506537,
+   "distortion_euc": 0.07312708456877703,
+   "ratio": 0.9791994559514942,
+   "stress_ratio_judged": 0.9775866735098927,
+   "stress_ratio_all_min": 0.9775866735098927,
+   "hyp_min_stress_all": 312.3049304317368,
+   "euc_min_stress_all": 319.46520845097876,
+   "opt_failure": false,
+   "flat_limit": false,
+   "n_converged_hyp": 5,
+   "n_restarts_hyp": 5,
+   "n_converged_euc": 5,
+   "n_restarts_euc": 5,
+   "judged_hyp": {
+    "init": "shrunk_m2",
+    "seed": null,
+    "m": 0.9,
+    "attempt": 0,
+    "stress": 312.3049304317368,
+    "distortion": 0.07160600142506537,
+    "scale": 164.71448762169953,
+    "finish_converged": true,
+    "adam_converged": true,
+    "n_iter_adam": 453,
+    "n_iter_finish": 391,
+    "n_at_cap": 0,
+    "max_radius": 2.194217692039823,
+    "max_rel_err": 0.9501050721778406,
+    "finish_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   },
+   "judged_euc": {
+    "init": "mds",
+    "seed": null,
+    "m": null,
+    "attempt": 0,
+    "stress": 319.46520845097876,
+    "distortion": 0.07312708456877703,
+    "scale": 175.4928402454762,
+    "finish_converged": true,
+    "adam_converged": true,
+    "n_iter_adam": 510,
+    "n_iter_finish": 25,
+    "max_rel_err": 0.8401882631080694,
+    "finish_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   },
+   "attempts": 1,
+   "retry_occurred": false,
+   "restart_seconds_sum": 162.33585620007943,
+   "all_hyp_stress": [
+    450.265671,
+    312.304931,
+    312.798148,
+    312.359279,
+    312.30493
+   ],
+   "all_euc_stress": [
+    319.465208,
+    319.848951,
+    319.571787,
+    319.848951,
+    321.493649
+   ],
+   "hyp_finish_converged_flags": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "euc_finish_converged_flags": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  "d_time_247": {
+   "n": 247,
+   "record": "쌍곡 이점 없음",
+   "advantage": "쌍곡 이점 없음",
+   "reason": "평균 상대 왜곡 비 0.9789 (문턱 0.8)",
+   "distortion_hyp": 0.07171406540068884,
+   "distortion_euc": 0.0732593409170284,
+   "ratio": 0.9789067783439425,
+   "stress_ratio_judged": 0.9741783530435889,
+   "stress_ratio_all_min": 0.9741783530435889,
+   "hyp_min_stress_all": 303.92892025860516,
+   "euc_min_stress_all": 311.984883783397,
+   "opt_failure": false,
+   "flat_limit": false,
+   "n_converged_hyp": 5,
+   "n_restarts_hyp": 5,
+   "n_converged_euc": 5,
+   "n_restarts_euc": 5,
+   "judged_hyp": {
+    "init": "U",
+    "seed": 1,
+    "m": null,
+    "attempt": 0,
+    "stress": 303.92892025860516,
+    "distortion": 0.07171406540068884,
+    "scale": 159.27098426320904,
+    "finish_converged": true,
+    "adam_converged": true,
+    "n_iter_adam": 1632,
+    "n_iter_finish": 412,
+    "n_at_cap": 0,
+    "max_radius": 2.259774848194689,
+    "max_rel_err": 0.8394223316709404,
+    "finish_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   },
+   "judged_euc": {
+    "init": "U",
+    "seed": 1,
+    "m": null,
+    "attempt": 0,
+    "stress": 311.984883783397,
+    "distortion": 0.0732593409170284,
+    "scale": 147.16467231831757,
+    "finish_converged": true,
+    "adam_converged": true,
+    "n_iter_adam": 736,
+    "n_iter_finish": 28,
+    "max_rel_err": 0.838960494308067,
+    "finish_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   },
+   "attempts": 1,
+   "retry_occurred": false,
+   "restart_seconds_sum": 151.8592775000434,
+   "all_hyp_stress": [
+    441.235717,
+    303.92892,
+    303.92892,
+    303.988941,
+    304.09282
+   ],
+   "all_euc_stress": [
+    313.485282,
+    312.827264,
+    311.984884,
+    447.314862,
+    312.854957
+   ],
+   "hyp_finish_converged_flags": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "euc_finish_converged_flags": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  "d_flow_main": {
+   "n": 247,
+   "record": "쌍곡 이점 없음",
+   "advantage": "쌍곡 이점 없음",
+   "reason": "평균 상대 왜곡 비 0.9128 (문턱 0.8)",
+   "distortion_hyp": 0.14607248081459684,
+   "distortion_euc": 0.1600353002905955,
+   "ratio": 0.9127516276056302,
+   "stress_ratio_judged": 0.8747166965747092,
+   "stress_ratio_all_min": 0.8747166965747092,
+   "hyp_min_stress_all": 1192.6236775564876,
+   "euc_min_stress_all": 1363.439936869464,
+   "opt_failure": false,
+   "flat_limit": false,
+   "n_converged_hyp": 5,
+   "n_restarts_hyp": 5,
+   "n_converged_euc": 5,
+   "n_restarts_euc": 5,
+   "judged_hyp": {
+    "init": "U",
+    "seed": 0,
+    "m": null,
+    "attempt": 0,
+    "stress": 1192.6236775564876,
+    "distortion": 0.14607248081459684,
+    "scale": 2.5561492959648024,
+    "finish_converged": true,
+    "adam_converged": true,
+    "n_iter_adam": 4949,
+    "n_iter_finish": 870,
+    "n_at_cap": 1,
+    "max_radius": 5.000000000000002,
+    "max_rel_err": 1.5547576431207863,
+    "finish_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   },
+   "judged_euc": {
+    "init": "U",
+    "seed": 3,
+    "m": null,
+    "attempt": 0,
+    "stress": 1363.439936869464,
+    "distortion": 0.1600353002905955,
+    "scale": 11.918072093775999,
+    "finish_converged": true,
+    "adam_converged": true,
+    "n_iter_adam": 666,
+    "n_iter_finish": 1,
+    "max_rel_err": 0.8953328098796364,
+    "finish_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   },
+   "attempts": 1,
+   "retry_occurred": false,
+   "restart_seconds_sum": 335.72795199995744,
+   "all_hyp_stress": [
+    1192.623678,
+    1655.23339,
+    1199.575007,
+    1193.249255,
+    1200.074224
+   ],
+   "all_euc_stress": [
+    1364.08148,
+    1363.916061,
+    1364.064159,
+    1363.976715,
+    1363.439937
+   ],
+   "hyp_finish_converged_flags": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "euc_finish_converged_flags": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  "d_flow_alt": {
+   "n": 247,
+   "record": "쌍곡 이점 없음",
+   "advantage": "쌍곡 이점 없음",
+   "reason": "평균 상대 왜곡 비 0.9413 (문턱 0.8)",
+   "distortion_hyp": 0.14882823200477804,
+   "distortion_euc": 0.15811170387156612,
+   "ratio": 0.9412853594043296,
+   "stress_ratio_judged": 0.92281606898434,
+   "stress_ratio_all_min": 0.92281606898434,
+   "hyp_min_stress_all": 1231.4107039304954,
+   "euc_min_stress_all": 1334.405354780826,
+   "opt_failure": false,
+   "flat_limit": false,
+   "n_converged_hyp": 5,
+   "n_restarts_hyp": 5,
+   "n_converged_euc": 5,
+   "n_restarts_euc": 5,
+   "judged_hyp": {
+    "init": "shrunk_m1",
+    "seed": null,
+    "m": 0.5,
+    "attempt": 0,
+    "stress": 1231.4107039304954,
+    "distortion": 0.14882823200477804,
+    "scale": 2.6658229309850787,
+    "finish_converged": true,
+    "adam_converged": true,
+    "n_iter_adam": 2837,
+    "n_iter_finish": 233,
+    "n_at_cap": 0,
+    "max_radius": 4.516214338140623,
+    "max_rel_err": 1.9032487447162798,
+    "finish_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   },
+   "judged_euc": {
+    "init": "mds",
+    "seed": null,
+    "m": null,
+    "attempt": 0,
+    "stress": 1334.405354780826,
+    "distortion": 0.15811170387156612,
+    "scale": 17.983694116584658,
+    "finish_converged": true,
+    "adam_converged": true,
+    "n_iter_adam": 531,
+    "n_iter_finish": 62,
+    "max_rel_err": 0.9303686880863176,
+    "finish_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   },
+   "attempts": 1,
+   "retry_occurred": false,
+   "restart_seconds_sum": 344.5216154999798,
+   "all_hyp_stress": [
+    1231.561254,
+    1231.663379,
+    1237.7946,
+    1231.410704,
+    1237.955877
+   ],
+   "all_euc_stress": [
+    1334.405355,
+    1334.761957,
+    1334.750028,
+    1335.66136,
+    1335.51948
+   ],
+   "hyp_finish_converged_flags": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "euc_finish_converged_flags": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  "ctrl_main_0": {
+   "n": 247,
+   "record": "쌍곡 이점 없음(평탄 극한)",
+   "advantage": "쌍곡 이점 없음(평탄 극한)",
+   "reason": "쌍곡 최소 stress가 유클리드의 1 ~ 1 + 0.001배 안에 있다",
+   "distortion_hyp": 0.08903114466471831,
+   "distortion_euc": 0.08900953918752857,
+   "ratio": 1.000242732154182,
+   "stress_ratio_judged": 1.0002545075847953,
+   "stress_ratio_all_min": 1.0002545075847953,
+   "hyp_min_stress_all": 514.9048580391386,
+   "euc_min_stress_all": 514.7738441913377,
+   "opt_failure": false,
+   "flat_limit": true,
+   "n_converged_hyp": 3,
+   "n_restarts_hyp": 5,
+   "n_converged_euc": 5,
+   "n_restarts_euc": 5,
+   "judged_hyp": {
+    "init": "U",
+    "seed": 0,
+    "m": null,
+    "attempt": 0,
+    "stress": 514.9048580391386,
+    "distortion": 0.08903114466471831,
+    "scale": 12561.262352004887,
+    "finish_converged": true,
+    "adam_converged": true,
+    "n_iter_adam": 1510,
+    "n_iter_finish": 5611,
+    "n_at_cap": 0,
+    "max_radius": 0.0015916312914788185,
+    "max_rel_err": 0.833048107726241,
+    "finish_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   },
+   "judged_euc": {
+    "init": "mds",
+    "seed": null,
+    "m": null,
+    "attempt": 0,
+    "stress": 514.7738441913377,
+    "distortion": 0.08900953918752857,
+    "scale": 23.478568792812386,
+    "finish_converged": true,
+    "adam_converged": true,
+    "n_iter_adam": 385,
+    "n_iter_finish": 1,
+    "max_rel_err": 0.8330617956087824,
+    "finish_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   },
+   "attempts": 1,
+   "retry_occurred": false,
+   "restart_seconds_sum": 203.8003963000083,
+   "all_hyp_stress": [
+    514.904858,
+    515.384032,
+    515.716209,
+    515.338239,
+    515.38272
+   ],
+   "all_euc_stress": [
+    514.773844,
+    515.493658,
+    514.789768,
+    514.952161,
+    514.918524
+   ],
+   "hyp_finish_converged_flags": [
+    true,
+    false,
+    true,
+    false,
+    true
+   ],
+   "euc_finish_converged_flags": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  "ctrl_main_1": {
+   "n": 247,
+   "record": "쌍곡 이점 없음(평탄 극한)",
+   "advantage": "쌍곡 이점 없음(평탄 극한)",
+   "reason": "쌍곡 최소 stress가 유클리드의 1 ~ 1 + 0.001배 안에 있다",
+   "distortion_hyp": 0.08986729869704492,
+   "distortion_euc": 0.08986446975959006,
+   "ratio": 1.0000314800439198,
+   "stress_ratio_judged": 1.0000683691052656,
+   "stress_ratio_all_min": 1.0000683691052656,
+   "hyp_min_stress_all": 522.1169793664303,
+   "euc_min_stress_all": 522.0812851360896,
+   "opt_failure": false,
+   "flat_limit": true,
+   "n_converged_hyp": 5,
+   "n_restarts_hyp": 5,
+   "n_converged_euc": 5,
+   "n_restarts_euc": 5,
+   "judged_hyp": {
+    "init": "shrunk_m2",
+    "seed": null,
+    "m": 0.9,
+    "attempt": 0,
+    "stress": 522.1169793664303,
+    "distortion": 0.08986729869704492,
+    "scale": 52293.50698273414,
+    "finish_converged": true,
+    "adam_converged": true,
+    "n_iter_adam": 2291,
+    "n_iter_finish": 1851,
+    "n_at_cap": 0,
+    "max_radius": 0.0004749291465899307,
+    "max_rel_err": 0.8552863278581758,
+    "finish_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   },
+   "judged_euc": {
+    "init": "U",
+    "seed": 1,
+    "m": null,
+    "attempt": 0,
+    "stress": 522.0812851360896,
+    "distortion": 0.08986446975959006,
+    "scale": 13.810904402272737,
+    "finish_converged": true,
+    "adam_converged": true,
+    "n_iter_adam": 419,
+    "n_iter_finish": 1,
+    "max_rel_err": 0.8553794700711449,
+    "finish_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   },
+   "attempts": 1,
+   "retry_occurred": false,
+   "restart_seconds_sum": 234.18586710002276,
+   "all_hyp_stress": [
+    522.32672,
+    522.711474,
+    522.413905,
+    522.353363,
+    522.116979
+   ],
+   "all_euc_stress": [
+    522.501885,
+    522.201829,
+    522.081285,
+    522.143678,
+    522.179937
+   ],
+   "hyp_finish_converged_flags": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "euc_finish_converged_flags": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  "ctrl_main_2": {
+   "n": 247,
+   "record": "쌍곡 이점 없음(평탄 극한)",
+   "advantage": "쌍곡 이점 없음(평탄 극한)",
+   "reason": "쌍곡 최소 stress가 유클리드의 1 ~ 1 + 0.001배 안에 있다",
+   "distortion_hyp": 0.0908050350437286,
+   "distortion_euc": 0.09080494854301166,
+   "ratio": 1.0000009525991516,
+   "stress_ratio_judged": 1.0000012223816488,
+   "stress_ratio_all_min": 1.0000012223816488,
+   "hyp_min_stress_all": 530.4955997665184,
+   "euc_min_stress_all": 530.4949512992251,
+   "opt_failure": false,
+   "flat_limit": true,
+   "n_converged_hyp": 3,
+   "n_restarts_hyp": 5,
+   "n_converged_euc": 5,
+   "n_restarts_euc": 5,
+   "judged_hyp": {
+    "init": "shrunk_m2",
+    "seed": null,
+    "m": 0.9,
+    "attempt": 0,
+    "stress": 530.4955997665184,
+    "distortion": 0.0908050350437286,
+    "scale": 3839.3698330712987,
+    "finish_converged": true,
+    "adam_converged": true,
+    "n_iter_adam": 1382,
+    "n_iter_finish": 15149,
+    "n_at_cap": 0,
+    "max_radius": 0.006263734271827853,
+    "max_rel_err": 0.864078569955627,
+    "finish_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   },
+   "judged_euc": {
+    "init": "mds",
+    "seed": null,
+    "m": null,
+    "attempt": 0,
+    "stress": 530.4949512992251,
+    "distortion": 0.09080494854301166,
+    "scale": 23.35899136626263,
+    "finish_converged": true,
+    "adam_converged": true,
+    "n_iter_adam": 367,
+    "n_iter_finish": 1,
+    "max_rel_err": 0.8640937921960896,
+    "finish_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   },
+   "attempts": 1,
+   "retry_occurred": false,
+   "restart_seconds_sum": 373.4161781000148,
+   "all_hyp_stress": [
+    530.646855,
+    530.850867,
+    530.792829,
+    530.938666,
+    530.4956
+   ],
+   "all_euc_stress": [
+    530.494951,
+    530.590644,
+    530.760136,
+    530.62291,
+    530.760136
+   ],
+   "hyp_finish_converged_flags": [
+    true,
+    false,
+    false,
+    true,
+    true
+   ],
+   "euc_finish_converged_flags": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  "ctrl_main_3": {
+   "n": 247,
+   "record": "쌍곡 이점 없음",
+   "advantage": "쌍곡 이점 없음",
+   "reason": "평균 상대 왜곡 비 0.9994 (문턱 0.8)",
+   "distortion_hyp": 0.09296876948954244,
+   "distortion_euc": 0.09302205683086867,
+   "ratio": 0.999427153697288,
+   "stress_ratio_judged": 0.9999966451773146,
+   "stress_ratio_all_min": 0.9999966451773146,
+   "hyp_min_stress_all": 545.8556890680475,
+   "euc_min_stress_all": 545.8575203232397,
+   "opt_failure": false,
+   "flat_limit": false,
+   "n_converged_hyp": 5,
+   "n_restarts_hyp": 5,
+   "n_converged_euc": 5,
+   "n_restarts_euc": 5,
+   "judged_hyp": {
+    "init": "U",
+    "seed": 1,
+    "m": null,
+    "attempt": 0,
+    "stress": 545.8556890680475,
+    "distortion": 0.09296876948954244,
+    "scale": 9880.401272205703,
+    "finish_converged": true,
+    "adam_converged": true,
+    "n_iter_adam": 1686,
+    "n_iter_finish": 9540,
+    "n_at_cap": 0,
+    "max_radius": 0.0020334144899890757,
+    "max_rel_err": 0.8731699503374118,
+    "finish_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   },
+   "judged_euc": {
+    "init": "U",
+    "seed": 3,
+    "m": null,
+    "attempt": 0,
+    "stress": 545.8575203232397,
+    "distortion": 0.09302205683086867,
+    "scale": 13.808498804474361,
+    "finish_converged": true,
+    "adam_converged": true,
+    "n_iter_adam": 652,
+    "n_iter_finish": 1,
+    "max_rel_err": 0.8731206103260344,
+    "finish_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   },
+   "attempts": 1,
+   "retry_occurred": false,
+   "restart_seconds_sum": 394.1545802000328,
+   "all_hyp_stress": [
+    546.709427,
+    545.855689,
+    545.962365,
+    546.545152,
+    546.112811
+   ],
+   "all_euc_stress": [
+    546.111827,
+    545.933473,
+    546.19665,
+    546.436425,
+    545.85752
+   ],
+   "hyp_finish_converged_flags": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "euc_finish_converged_flags": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  "ctrl_main_4": {
+   "n": 247,
+   "record": "쌍곡 이점 없음(평탄 극한)",
+   "advantage": "쌍곡 이점 없음(평탄 극한)",
+   "reason": "쌍곡 최소 stress가 유클리드의 1 ~ 1 + 0.001배 안에 있다",
+   "distortion_hyp": 0.09312308650140479,
+   "distortion_euc": 0.09312198798887521,
+   "ratio": 1.0000117964892428,
+   "stress_ratio_judged": 1.0000017254014395,
+   "stress_ratio_all_min": 1.0000017254014395,
+   "hyp_min_stress_all": 548.1052203758029,
+   "euc_min_stress_all": 548.1042746758984,
+   "opt_failure": false,
+   "flat_limit": true,
+   "n_converged_hyp": 5,
+   "n_restarts_hyp": 5,
+   "n_converged_euc": 5,
+   "n_restarts_euc": 5,
+   "judged_hyp": {
+    "init": "U",
+    "seed": 2,
+    "m": null,
+    "attempt": 0,
+    "stress": 548.1052203758029,
+    "distortion": 0.09312308650140479,
+    "scale": 3345.134500543151,
+    "finish_converged": true,
+    "adam_converged": true,
+    "n_iter_adam": 2045,
+    "n_iter_finish": 11236,
+    "n_at_cap": 0,
+    "max_radius": 0.006531590917605285,
+    "max_rel_err": 0.8436768678041022,
+    "finish_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   },
+   "judged_euc": {
+    "init": "U",
+    "seed": 1,
+    "m": null,
+    "attempt": 0,
+    "stress": 548.1042746758984,
+    "distortion": 0.09312198798887521,
+    "scale": 13.709408831445145,
+    "finish_converged": true,
+    "adam_converged": true,
+    "n_iter_adam": 415,
+    "n_iter_finish": 1,
+    "max_rel_err": 0.8436817534541766,
+    "finish_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   },
+   "attempts": 1,
+   "retry_occurred": false,
+   "restart_seconds_sum": 446.6045516000304,
+   "all_hyp_stress": [
+    548.169124,
+    548.27379,
+    548.10522,
+    548.106322,
+    548.10599
+   ],
+   "all_euc_stress": [
+    548.376425,
+    548.836677,
+    548.104275,
+    548.104275,
+    548.104275
+   ],
+   "hyp_finish_converged_flags": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "euc_finish_converged_flags": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  "ctrl_alt_0": {
+   "n": 247,
+   "record": "쌍곡 이점 없음(평탄 극한)",
+   "advantage": "쌍곡 이점 없음(평탄 극한)",
+   "reason": "쌍곡 최소 stress가 유클리드의 1 ~ 1 + 0.001배 안에 있다",
+   "distortion_hyp": 0.09327650164331977,
+   "distortion_euc": 0.0932660766227809,
+   "ratio": 1.0001117771961292,
+   "stress_ratio_judged": 1.000046774263052,
+   "stress_ratio_all_min": 1.000046774263052,
+   "hyp_min_stress_all": 549.6630557451125,
+   "euc_min_stress_all": 549.6373468632671,
+   "opt_failure": false,
+   "flat_limit": true,
+   "n_converged_hyp": 5,
+   "n_restarts_hyp": 5,
+   "n_converged_euc": 5,
+   "n_restarts_euc": 5,
+   "judged_hyp": {
+    "init": "shrunk_m1",
+    "seed": null,
+    "m": 0.5,
+    "attempt": 0,
+    "stress": 549.6630557451125,
+    "distortion": 0.09327650164331977,
+    "scale": 3487.444739428503,
+    "finish_converged": true,
+    "adam_converged": true,
+    "n_iter_adam": 1499,
+    "n_iter_finish": 6570,
+    "n_at_cap": 0,
+    "max_radius": 0.005182642571774404,
+    "max_rel_err": 0.859760680854113,
+    "finish_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   },
+   "judged_euc": {
+    "init": "U",
+    "seed": 2,
+    "m": null,
+    "attempt": 0,
+    "stress": 549.6373468632671,
+    "distortion": 0.0932660766227809,
+    "scale": 11.898127002733201,
+    "finish_converged": true,
+    "adam_converged": true,
+    "n_iter_adam": 498,
+    "n_iter_finish": 1,
+    "max_rel_err": 0.8597582397360949,
+    "finish_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   },
+   "attempts": 1,
+   "retry_occurred": false,
+   "restart_seconds_sum": 469.7043507999624,
+   "all_hyp_stress": [
+    549.950967,
+    549.78786,
+    549.714842,
+    549.663056,
+    550.08935
+   ],
+   "all_euc_stress": [
+    549.710329,
+    550.101845,
+    549.819074,
+    549.637347,
+    550.069102
+   ],
+   "hyp_finish_converged_flags": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "euc_finish_converged_flags": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  "ctrl_alt_1": {
+   "n": 247,
+   "record": "쌍곡 이점 없음(평탄 극한)",
+   "advantage": "쌍곡 이점 없음(평탄 극한)",
+   "reason": "쌍곡 최소 stress가 유클리드의 1 ~ 1 + 0.001배 안에 있다",
+   "distortion_hyp": 0.09215129600999504,
+   "distortion_euc": 0.09215250848833649,
+   "ratio": 0.9999868426984643,
+   "stress_ratio_judged": 1.0000015512377234,
+   "stress_ratio_all_min": 1.0000015512377234,
+   "hyp_min_stress_all": 541.3077911193836,
+   "euc_min_stress_all": 541.3069514236206,
+   "opt_failure": false,
+   "flat_limit": true,
+   "n_converged_hyp": 4,
+   "n_restarts_hyp": 5,
+   "n_converged_euc": 5,
+   "n_restarts_euc": 5,
+   "judged_hyp": {
+    "init": "U",
+    "seed": 1,
+    "m": null,
+    "attempt": 0,
+    "stress": 541.3077911193836,
+    "distortion": 0.09215129600999504,
+    "scale": 2452642.645740215,
+    "finish_converged": true,
+    "adam_converged": true,
+    "n_iter_adam": 2103,
+    "n_iter_finish": 8786,
+    "n_at_cap": 0,
+    "max_radius": 7.993629270749369e-06,
+    "max_rel_err": 0.8268335166775662,
+    "finish_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   },
+   "judged_euc": {
+    "init": "U",
+    "seed": 1,
+    "m": null,
+    "attempt": 0,
+    "stress": 541.3069514236206,
+    "distortion": 0.09215250848833649,
+    "scale": 13.632575357430472,
+    "finish_converged": true,
+    "adam_converged": true,
+    "n_iter_adam": 417,
+    "n_iter_finish": 1,
+    "max_rel_err": 0.8268264873655022,
+    "finish_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   },
+   "attempts": 1,
+   "retry_occurred": false,
+   "restart_seconds_sum": 495.653043099941,
+   "all_hyp_stress": [
+    541.371448,
+    541.307791,
+    541.387851,
+    541.481924,
+    541.909292
+   ],
+   "all_euc_stress": [
+    541.716238,
+    541.492084,
+    541.306951,
+    541.400969,
+    541.541749
+   ],
+   "hyp_finish_converged_flags": [
+    true,
+    true,
+    true,
+    true,
+    false
+   ],
+   "euc_finish_converged_flags": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  "ctrl_alt_2": {
+   "n": 247,
+   "record": "쌍곡 이점 없음",
+   "advantage": "쌍곡 이점 없음",
+   "reason": "평균 상대 왜곡 비 0.9993 (문턱 0.8)",
+   "distortion_hyp": 0.09353955788656577,
+   "distortion_euc": 0.09360890614741066,
+   "ratio": 0.9992591702680974,
+   "stress_ratio_judged": 0.9998010790441331,
+   "stress_ratio_all_min": 0.9998010790441331,
+   "hyp_min_stress_all": 554.2045661455245,
+   "euc_min_stress_all": 554.3148309815546,
+   "opt_failure": false,
+   "flat_limit": false,
+   "n_converged_hyp": 5,
+   "n_restarts_hyp": 5,
+   "n_converged_euc": 5,
+   "n_restarts_euc": 5,
+   "judged_hyp": {
+    "init": "U",
+    "seed": 2,
+    "m": null,
+    "attempt": 0,
+    "stress": 554.2045661455245,
+    "distortion": 0.09353955788656577,
+    "scale": 1767.2922338486005,
+    "finish_converged": true,
+    "adam_converged": true,
+    "n_iter_adam": 1674,
+    "n_iter_finish": 7129,
+    "n_at_cap": 0,
+    "max_radius": 0.012234020064716763,
+    "max_rel_err": 0.8529104221674803,
+    "finish_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   },
+   "judged_euc": {
+    "init": "U",
+    "seed": 3,
+    "m": null,
+    "attempt": 0,
+    "stress": 554.3148309815546,
+    "distortion": 0.09360890614741066,
+    "scale": 13.545176736200146,
+    "finish_converged": true,
+    "adam_converged": true,
+    "n_iter_adam": 602,
+    "n_iter_finish": 1,
+    "max_rel_err": 0.8535420327265173,
+    "finish_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   },
+   "attempts": 1,
+   "retry_occurred": false,
+   "restart_seconds_sum": 600.1465875000285,
+   "all_hyp_stress": [
+    554.585906,
+    554.261095,
+    554.204566,
+    554.25629,
+    554.318011
+   ],
+   "all_euc_stress": [
+    554.325121,
+    554.639563,
+    555.070449,
+    554.543243,
+    554.314831
+   ],
+   "hyp_finish_converged_flags": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "euc_finish_converged_flags": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  "ctrl_alt_3": {
+   "n": 247,
+   "record": "쌍곡 이점 없음",
+   "advantage": "쌍곡 이점 없음",
+   "reason": "평균 상대 왜곡 비 0.9992 (문턱 0.8)",
+   "distortion_hyp": 0.09681153398059283,
+   "distortion_euc": 0.09689017923847895,
+   "ratio": 0.9991883051666924,
+   "stress_ratio_judged": 0.9997187143562412,
+   "stress_ratio_all_min": 0.9997187143562412,
+   "hyp_min_stress_all": 578.6302367064173,
+   "euc_min_stress_all": 578.793042880087,
+   "opt_failure": false,
+   "flat_limit": false,
+   "n_converged_hyp": 4,
+   "n_restarts_hyp": 5,
+   "n_converged_euc": 5,
+   "n_restarts_euc": 5,
+   "judged_hyp": {
+    "init": "U",
+    "seed": 0,
+    "m": null,
+    "attempt": 0,
+    "stress": 578.6302367064173,
+    "distortion": 0.09681153398059283,
+    "scale": 9092.48253190005,
+    "finish_converged": true,
+    "adam_converged": true,
+    "n_iter_adam": 2374,
+    "n_iter_finish": 4459,
+    "n_at_cap": 0,
+    "max_radius": 0.002128862587217235,
+    "max_rel_err": 0.8723698742557442,
+    "finish_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   },
+   "judged_euc": {
+    "init": "mds",
+    "seed": null,
+    "m": null,
+    "attempt": 0,
+    "stress": 578.793042880087,
+    "distortion": 0.09689017923847895,
+    "scale": 23.299897195591242,
+    "finish_converged": true,
+    "adam_converged": true,
+    "n_iter_adam": 351,
+    "n_iter_finish": 1,
+    "max_rel_err": 0.8723851250772606,
+    "finish_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   },
+   "attempts": 1,
+   "retry_occurred": false,
+   "restart_seconds_sum": 531.7010002000025,
+   "all_hyp_stress": [
+    578.630237,
+    578.756644,
+    578.793554,
+    578.947145,
+    578.630261
+   ],
+   "all_euc_stress": [
+    578.793043,
+    579.165891,
+    578.907141,
+    578.886799,
+    579.866422
+   ],
+   "hyp_finish_converged_flags": [
+    true,
+    true,
+    true,
+    false,
+    true
+   ],
+   "euc_finish_converged_flags": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  "ctrl_alt_4": {
+   "n": 247,
+   "record": "쌍곡 이점 없음(평탄 극한)",
+   "advantage": "쌍곡 이점 없음(평탄 극한)",
+   "reason": "쌍곡 최소 stress가 유클리드의 1 ~ 1 + 0.001배 안에 있다",
+   "distortion_hyp": 0.09670288544201219,
+   "distortion_euc": 0.09670246174332173,
+   "ratio": 1.0000043814674706,
+   "stress_ratio_judged": 1.0000015146473684,
+   "stress_ratio_all_min": 1.0000015146473684,
+   "hyp_min_stress_all": 578.6924358019023,
+   "euc_min_stress_all": 578.6915592882549,
+   "opt_failure": false,
+   "flat_limit": true,
+   "n_converged_hyp": 4,
+   "n_restarts_hyp": 5,
+   "n_converged_euc": 5,
+   "n_restarts_euc": 5,
+   "judged_hyp": {
+    "init": "shrunk_m1",
+    "seed": null,
+    "m": 0.5,
+    "attempt": 0,
+    "stress": 578.6924358019023,
+    "distortion": 0.09670288544201219,
+    "scale": 3950.022183932669,
+    "finish_converged": true,
+    "adam_converged": true,
+    "n_iter_adam": 1455,
+    "n_iter_finish": 9428,
+    "n_at_cap": 0,
+    "max_radius": 0.004702076196878159,
+    "max_rel_err": 0.865897731393083,
+    "finish_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   },
+   "judged_euc": {
+    "init": "mds",
+    "seed": null,
+    "m": null,
+    "attempt": 0,
+    "stress": 578.6915592882549,
+    "distortion": 0.09670246174332173,
+    "scale": 22.653436736087603,
+    "finish_converged": true,
+    "adam_converged": true,
+    "n_iter_adam": 354,
+    "n_iter_finish": 1,
+    "max_rel_err": 0.8659061080046775,
+    "finish_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   },
+   "attempts": 1,
+   "retry_occurred": false,
+   "restart_seconds_sum": 587.3927685999079,
+   "all_hyp_stress": [
+    578.825711,
+    579.365171,
+    578.692969,
+    578.692436,
+    578.693527
+   ],
+   "all_euc_stress": [
+    578.691559,
+    578.763415,
+    578.968307,
+    579.256882,
+    579.328692
+   ],
+   "hyp_finish_converged_flags": [
+    true,
+    false,
+    true,
+    true,
+    true
+   ],
+   "euc_finish_converged_flags": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ]
+  }
+ },
+ "hyperbolic_advantage": {
+  "d_time_250": {
+   "record": "쌍곡 이점 없음",
+   "advantage": "쌍곡 이점 없음",
+   "ratio": 0.9791994559514942,
+   "reason": "평균 상대 왜곡 비 0.9792 (문턱 0.8)",
+   "opt_failure": false,
+   "flat_limit": false
+  },
+  "d_time_247": {
+   "record": "쌍곡 이점 없음",
+   "advantage": "쌍곡 이점 없음",
+   "ratio": 0.9789067783439425,
+   "reason": "평균 상대 왜곡 비 0.9789 (문턱 0.8)",
+   "opt_failure": false,
+   "flat_limit": false
+  },
+  "d_flow_main": {
+   "own_record": "쌍곡 이점 없음",
+   "own_advantage": "쌍곡 이점 없음",
+   "own_ratio": 0.9127516276056302,
+   "vs_controls": "쌍곡 이점 없음",
+   "reason": "평균 상대 왜곡 비 0.9128 (문턱 0.8)",
+   "control_ratios": [
+    1.000242732154182,
+    1.0000314800439198,
+    1.0000009525991516,
+    0.999427153697288,
+    1.0000117964892428
+   ],
+   "control_records": [
+    "쌍곡 이점 없음(평탄 극한)",
+    "쌍곡 이점 없음(평탄 극한)",
+    "쌍곡 이점 없음(평탄 극한)",
+    "쌍곡 이점 없음",
+    "쌍곡 이점 없음(평탄 극한)"
+   ],
+   "control_min_ratio": 0.999427153697288
+  },
+  "d_flow_alt": {
+   "own_record": "쌍곡 이점 없음",
+   "own_advantage": "쌍곡 이점 없음",
+   "own_ratio": 0.9412853594043296,
+   "vs_controls": "쌍곡 이점 없음",
+   "reason": "평균 상대 왜곡 비 0.9413 (문턱 0.8)",
+   "control_ratios": [
+    1.0001117771961292,
+    0.9999868426984643,
+    0.9992591702680974,
+    0.9991883051666924,
+    1.0000043814674706
+   ],
+   "control_records": [
+    "쌍곡 이점 없음(평탄 극한)",
+    "쌍곡 이점 없음(평탄 극한)",
+    "쌍곡 이점 없음",
+    "쌍곡 이점 없음",
+    "쌍곡 이점 없음(평탄 극한)"
+   ],
+   "control_min_ratio": 0.9991883051666924
+  }
+ },
+ "hierarchy": {
+  "overall": false,
+  "conditions": [
+   {
+    "정규화": "main",
+    "부분집합": "전체",
+    "d_flow": 0.3011658968083578,
+    "대조군 최솟값": 0.2597982866389725,
+    "대조군 중앙값": 0.2621452068964967,
+    "대조군 최댓값": 0.2644492950659901,
+    "d_flow 이하인 대조군 수": 20,
+    "여유(최솟값 - d_flow)": -0.0413676101693852,
+    "통과": false
+   },
+   {
+    "정규화": "main",
+    "부분집합": "섬 제외",
+    "d_flow": 0.3007151122746935,
+    "대조군 최솟값": 0.2592374854801416,
+    "대조군 중앙값": 0.2615418158151573,
+    "대조군 최댓값": 0.2638249714667398,
+    "d_flow 이하인 대조군 수": 20,
+    "여유(최솟값 - d_flow)": -0.0414776267945519,
+    "통과": false
+   },
+   {
+    "정규화": "alt",
+    "부분집합": "전체",
+    "d_flow": 0.3007243783282195,
+    "대조군 최솟값": 0.2623488143768941,
+    "대조군 중앙값": 0.2653239938223992,
+    "대조군 최댓값": 0.26679426555126,
+    "d_flow 이하인 대조군 수": 20,
+    "여유(최솟값 - d_flow)": -0.0383755639513253,
+    "통과": false
+   },
+   {
+    "정규화": "alt",
+    "부분집합": "섬 제외",
+    "d_flow": 0.3003062448030212,
+    "대조군 최솟값": 0.2617029114777475,
+    "대조군 중앙값": 0.2646072572285287,
+    "대조군 최댓값": 0.2661245605946578,
+    "d_flow 이하인 대조군 수": 20,
+    "여유(최솟값 - d_flow)": -0.0386033333252736,
+    "통과": false
+   }
+  ]
+ },
+ "delta": [
+  {
+   "입력": "d_time_250",
+   "부분집합": "전체",
+   "n": 250,
+   "diam": 621.4297455639328,
+   "delta": 146.9738103164197,
+   "delta_rel": 0.4730182659120845,
+   "delta_bar": 0.2425752359508707,
+   "n_ties": 0,
+   "delta_diff": 0.0,
+   "delta_quad": 146.9738103164197,
+   "n_quads": 158882750
+  },
+  {
+   "입력": "d_time_250",
+   "부분집합": "섬 제외",
+   "n": 247,
+   "diam": 428.6151848950332,
+   "delta": 100.3104274299814,
+   "delta_rel": 0.4680675392055798,
+   "delta_bar": 0.2419171392860128,
+   "n_ties": 0,
+   "delta_diff": 2.8421709430404014e-14,
+   "delta_quad": 100.31042742998136,
+   "n_quads": 151348015
+  },
+  {
+   "입력": "d_time_249",
+   "부분집합": "전체",
+   "n": 249,
+   "diam": 621.4297455639328,
+   "delta": 146.9738103164197,
+   "delta_rel": 0.4730182659120845,
+   "delta_bar": 0.2429512297372873,
+   "n_ties": 0,
+   "delta_diff": 0.0,
+   "delta_quad": 146.9738103164197,
+   "n_quads": 156340626
+  },
+  {
+   "입력": "d_time_249",
+   "부분집합": "섬 제외",
+   "n": 246,
+   "diam": 428.6151848950332,
+   "delta": 100.31042742998132,
+   "delta_rel": 0.4680675392055795,
+   "delta_bar": 0.2422906361071382,
+   "n_ties": 0,
+   "delta_diff": 2.8421709430404014e-14,
+   "delta_quad": 100.3104274299813,
+   "n_quads": 148897035
+  },
+  {
+   "입력": "d_time_247",
+   "부분집합": "전체",
+   "n": 247,
+   "diam": 508.2841327006206,
+   "delta": 100.31042742998132,
+   "delta_rel": 0.3947021792595055,
+   "delta_bar": 0.2427782355271312,
+   "n_ties": 0,
+   "delta_diff": 2.8421709430404014e-14,
+   "delta_quad": 100.3104274299813,
+   "n_quads": 151348015
+  },
+  {
+   "입력": "d_time_247",
+   "부분집합": "섬 제외",
+   "n": 246,
+   "diam": 428.6151848950332,
+   "delta": 100.31042742998132,
+   "delta_rel": 0.4680675392055795,
+   "delta_bar": 0.2422906361071382,
+   "n_ties": 0,
+   "delta_diff": 2.8421709430404014e-14,
+   "delta_quad": 100.3104274299813,
+   "n_quads": 148897035
+  },
+  {
+   "입력": "d_flow_main",
+   "부분집합": "전체",
+   "n": 247,
+   "diam": 26.531934347939742,
+   "delta": 9.581528876291555,
+   "delta_rel": 0.7222638764772594,
+   "delta_bar": 0.3011658968083578,
+   "n_ties": 18628,
+   "delta_diff": 1.7763568394002505e-15,
+   "delta_quad": 9.581528876291554,
+   "n_quads": 151348015
+  },
+  {
+   "입력": "d_flow_main",
+   "부분집합": "섬 제외",
+   "n": 246,
+   "diam": 26.531934347939742,
+   "delta": 9.581528876291555,
+   "delta_rel": 0.7222638764772594,
+   "delta_bar": 0.3007151122746935,
+   "n_ties": 18132,
+   "delta_diff": 1.7763568394002505e-15,
+   "delta_quad": 9.581528876291554,
+   "n_quads": 148897035
+  },
+  {
+   "입력": "d_flow_alt",
+   "부분집합": "전체",
+   "n": 247,
+   "diam": 26.269501846304497,
+   "delta": 9.407934195395358,
+   "delta_rel": 0.7162628549592259,
+   "delta_bar": 0.3007243783282195,
+   "n_ties": 21032,
+   "delta_diff": 3.552713678800501e-15,
+   "delta_quad": 9.407934195395354,
+   "n_quads": 151348015
+  },
+  {
+   "입력": "d_flow_alt",
+   "부분집합": "섬 제외",
+   "n": 246,
+   "diam": 26.269501846304497,
+   "delta": 9.407934195395358,
+   "delta_rel": 0.7162628549592259,
+   "delta_bar": 0.3003062448030212,
+   "n_ties": 20548,
+   "delta_diff": 3.552713678800501e-15,
+   "delta_quad": 9.407934195395354,
+   "n_quads": 148897035
+  }
+ ],
+ "control_delta_bar": {
+  "main|전체": {
+   "n": 20,
+   "min": 0.25979828663897253,
+   "median": 0.2621452068964967,
+   "max": 0.26444929506599013,
+   "mean": 0.2625173609901409,
+   "std": 0.001366068791280861,
+   "observed": 0.3011658968083578,
+   "n_controls_below_observed": 20,
+   "n_controls_le_observed": 20,
+   "rank_of_observed_among_21": 21,
+   "observed_minus_ctrl_median": 0.03902068991186114,
+   "observed_z": 28.291793257335943,
+   "all_20": [
+    0.261676,
+    0.261368,
+    0.26202,
+    0.263153,
+    0.264449,
+    0.259798,
+    0.262081,
+    0.26366,
+    0.261924,
+    0.263841,
+    0.26221,
+    0.260281,
+    0.262641,
+    0.263903,
+    0.264147,
+    0.264149,
+    0.261827,
+    0.261701,
+    0.261268,
+    0.26425
+   ]
+  },
+  "main|섬 제외": {
+   "n": 20,
+   "min": 0.2592374854801416,
+   "median": 0.26154181581515734,
+   "max": 0.2638249714667398,
+   "mean": 0.26188787783919876,
+   "std": 0.0013646245768406924,
+   "observed": 0.3007151122746935,
+   "n_controls_below_observed": 20,
+   "n_controls_le_observed": 20,
+   "rank_of_observed_among_21": 21,
+   "observed_minus_ctrl_median": 0.039173296459536155,
+   "observed_z": 28.45268588477684,
+   "all_20": [
+    0.260998,
+    0.260714,
+    0.261412,
+    0.262486,
+    0.263825,
+    0.259237,
+    0.261517,
+    0.262971,
+    0.26125,
+    0.26326,
+    0.261566,
+    0.259608,
+    0.262113,
+    0.263255,
+    0.263561,
+    0.263489,
+    0.261222,
+    0.261054,
+    0.260621,
+    0.263598
+   ]
+  },
+  "alt|전체": {
+   "n": 20,
+   "min": 0.26234881437689417,
+   "median": 0.26532399382239924,
+   "max": 0.26679426555126007,
+   "mean": 0.26510843572525067,
+   "std": 0.0013051331387555346,
+   "observed": 0.3007243783282195,
+   "n_controls_below_observed": 20,
+   "n_controls_le_observed": 20,
+   "rank_of_observed_among_21": 21,
+   "observed_minus_ctrl_median": 0.03540038450582028,
+   "observed_z": 27.289125948429465,
+   "all_20": [
+    0.265404,
+    0.263281,
+    0.263627,
+    0.265663,
+    0.266652,
+    0.262349,
+    0.264558,
+    0.266588,
+    0.264909,
+    0.266768,
+    0.265192,
+    0.265244,
+    0.265812,
+    0.266235,
+    0.265524,
+    0.266181,
+    0.263923,
+    0.263675,
+    0.263792,
+    0.266794
+   ]
+  },
+  "alt|섬 제외": {
+   "n": 20,
+   "min": 0.26170291147774755,
+   "median": 0.26460725722852874,
+   "max": 0.2661245605946578,
+   "mean": 0.26443775865816754,
+   "std": 0.0013057052645215918,
+   "observed": 0.3003062448030212,
+   "n_controls_below_observed": 20,
+   "n_controls_le_observed": 20,
+   "rank_of_observed_among_21": 21,
+   "observed_minus_ctrl_median": 0.03569898757449247,
+   "observed_z": 27.470583997373875,
+   "all_20": [
+    0.264715,
+    0.26263,
+    0.262953,
+    0.26497,
+    0.266038,
+    0.261703,
+    0.263874,
+    0.265917,
+    0.264173,
+    0.266125,
+    0.264499,
+    0.264495,
+    0.265205,
+    0.265569,
+    0.264915,
+    0.265456,
+    0.263271,
+    0.263006,
+    0.263124,
+    0.266116
+   ]
+  }
+ },
+ "worst20": {
+  "d_time_250": {
+   "poincare": {
+    "max_abs_rel_err": 0.9501050721778406,
+    "median_abs_rel_err": 0.5973154434783088,
+    "min_abs_rel_err": 0.5440760715615611,
+    "n_underestimated": 17,
+    "n_overestimated": 3,
+    "n_pairs_with_ulleung": 0,
+    "most_frequent_units": [
+     {
+      "unit": "경상남도 의령군",
+      "n_pairs": 3
+     },
+     {
+      "unit": "경상남도 사천시",
+      "n_pairs": 3
+     },
+     {
+      "unit": "전북특별자치도 장수군",
+      "n_pairs": 3
+     }
+    ],
+    "top5": [
+     {
+      "i": "전라남도 완도군",
+      "j": "제주특별자치도 제주시",
+      "d_true": 201.67479718197512,
+      "d_emb": 393.28704491500696,
+      "rel_err": 0.9501050721778406
+     },
+     {
+      "i": "강원특별자치도 동해시",
+      "j": "강원특별자치도 정선군",
+      "d_true": 88.66518511404924,
+      "d_emb": 14.134903524131552,
+      "rel_err": -0.8405811310724727
+     },
+     {
+      "i": "전라남도 완도군",
+      "j": "제주특별자치도 서귀포시",
+      "d_true": 243.8604959393939,
+      "d_emb": 434.5540959595613,
+      "rel_err": 0.7819782342588202
+     },
+     {
+      "i": "경상남도 의령군",
+      "j": "경상남도 고성군",
+      "d_true": 59.90581979726164,
+      "d_emb": 15.252779931339674,
+      "rel_err": -0.7453873432838508
+     },
+     {
+      "i": "강원특별자치도 삼척시",
+      "j": "강원특별자치도 정선군",
+      "d_true": 89.1655406091215,
+      "d_emb": 24.07394723494974,
+      "rel_err": -0.7300083970725456
+     }
+    ]
+   },
+   "euclid": {
+    "max_abs_rel_err": 0.8401882631080694,
+    "median_abs_rel_err": 0.5976721939281306,
+    "min_abs_rel_err": 0.5540228851276259,
+    "n_underestimated": 18,
+    "n_overestimated": 2,
+    "n_pairs_with_ulleung": 0,
+    "most_frequent_units": [
+     {
+      "unit": "경상남도 사천시",
+      "n_pairs": 3
+     },
+     {
+      "unit": "전라남도 완도군",
+      "n_pairs": 2
+     },
+     {
+      "unit": "경상남도 의령군",
+      "n_pairs": 2
+     }
+    ],
+    "top5": [
+     {
+      "i": "강원특별자치도 동해시",
+      "j": "강원특별자치도 정선군",
+      "d_true": 88.66518511404924,
+      "d_emb": 14.169737234920753,
+      "rel_err": -0.8401882631080694
+     },
+     {
+      "i": "전라남도 완도군",
+      "j": "제주특별자치도 제주시",
+      "d_true": 201.67479718197512,
+      "d_emb": 352.64683685607446,
+      "rel_err": 0.7485915036665405
+     },
+     {
+      "i": "경상남도 의령군",
+      "j": "경상남도 고성군",
+      "d_true": 59.90581979726164,
+      "d_emb": 15.396110299661144,
+      "rel_err": -0.7429947482270343
+     },
+     {
+      "i": "강원특별자치도 삼척시",
+      "j": "강원특별자치도 정선군",
+      "d_true": 89.1655406091215,
+      "d_emb": 27.922834502109843,
+      "rel_err": -0.6868427611007679
+     },
+     {
+      "i": "강원특별자치도 화천군",
+      "j": "강원특별자치도 양구군",
+      "d_true": 61.50692893574403,
+      "d_emb": 20.68968793631959,
+      "rel_err": -0.6636202084169411
+     }
+    ]
+   }
+  },
+  "d_time_247": {
+   "poincare": {
+    "max_abs_rel_err": 0.8394223316709404,
+    "median_abs_rel_err": 0.5784807437332369,
+    "min_abs_rel_err": 0.5410525854491195,
+    "n_underestimated": 19,
+    "n_overestimated": 1,
+    "n_pairs_with_ulleung": 0,
+    "most_frequent_units": [
+     {
+      "unit": "경상남도 의령군",
+      "n_pairs": 3
+     },
+     {
+      "unit": "경상남도 사천시",
+      "n_pairs": 3
+     },
+     {
+      "unit": "전북특별자치도 장수군",
+      "n_pairs": 3
+     }
+    ],
+    "top5": [
+     {
+      "i": "강원특별자치도 동해시",
+      "j": "강원특별자치도 정선군",
+      "d_true": 88.66518511404924,
+      "d_emb": 14.237648687578478,
+      "rel_err": -0.8394223316709404
+     },
+     {
+      "i": "경상남도 의령군",
+      "j": "경상남도 고성군",
+      "d_true": 59.90581979726164,
+      "d_emb": 15.41327421892096,
+      "rel_err": -0.7427082331719377
+     },
+     {
+      "i": "강원특별자치도 삼척시",
+      "j": "강원특별자치도 정선군",
+      "d_true": 89.16554060912149,
+      "d_emb": 23.874169639525256,
+      "rel_err": -0.7322489217647051
+     },
+     {
+      "i": "경상남도 통영시",
+      "j": "경상남도 사천시",
+      "d_true": 54.7175062489043,
+      "d_emb": 20.390599067966665,
+      "rel_err": -0.6273478002595381
+     },
+     {
+      "i": "경상남도 통영시",
+      "j": "경상남도 의령군",
+      "d_true": 63.21283470455698,
+      "d_emb": 23.74034922933318,
+      "rel_err": -0.624437832280574
+     }
+    ]
+   },
+   "euclid": {
+    "max_abs_rel_err": 0.838960494308067,
+    "median_abs_rel_err": 0.5867858310270302,
+    "min_abs_rel_err": 0.5433943166626344,
+    "n_underestimated": 20,
+    "n_overestimated": 0,
+    "n_pairs_with_ulleung": 0,
+    "most_frequent_units": [
+     {
+      "unit": "경상남도 사천시",
+      "n_pairs": 3
+     },
+     {
+      "unit": "전북특별자치도 장수군",
+      "n_pairs": 3
+     },
+     {
+      "unit": "경상남도 의령군",
+      "n_pairs": 2
+     }
+    ],
+    "top5": [
+     {
+      "i": "강원특별자치도 동해시",
+      "j": "강원특별자치도 정선군",
+      "d_true": 88.66518511404924,
+      "d_emb": 14.278597582850225,
+      "rel_err": -0.838960494308067
+     },
+     {
+      "i": "경상남도 의령군",
+      "j": "경상남도 고성군",
+      "d_true": 59.90581979726164,
+      "d_emb": 15.459709085210696,
+      "rel_err": -0.7419331020336462
+     },
+     {
+      "i": "강원특별자치도 삼척시",
+      "j": "강원특별자치도 정선군",
+      "d_true": 89.16554060912149,
+      "d_emb": 27.8873531630756,
+      "rel_err": -0.687240687685319
+     },
+     {
+      "i": "경상남도 통영시",
+      "j": "경상남도 사천시",
+      "d_true": 54.7175062489043,
+      "d_emb": 18.49277104488214,
+      "rel_err": -0.6620319105779341
+     },
+     {
+      "i": "강원특별자치도 화천군",
+      "j": "강원특별자치도 양구군",
+      "d_true": 61.50692893574404,
+      "d_emb": 21.33185740326755,
+      "rel_err": -0.653179604763671
+     }
+    ]
+   }
+  },
+  "d_flow_main": {
+   "poincare": {
+    "max_abs_rel_err": 1.5547576431207863,
+    "median_abs_rel_err": 1.0695261717097728,
+    "min_abs_rel_err": 0.9223281210041362,
+    "n_underestimated": 2,
+    "n_overestimated": 18,
+    "n_pairs_with_ulleung": 0,
+    "most_frequent_units": [
+     {
+      "unit": "충청북도 충주시",
+      "n_pairs": 3
+     },
+     {
+      "unit": "경기도 고양시 일산동구",
+      "n_pairs": 3
+     },
+     {
+      "unit": "충청북도 괴산군",
+      "n_pairs": 2
+     }
+    ],
+    "top5": [
+     {
+      "i": "충청북도 충주시",
+      "j": "충청북도 제천시",
+      "d_true": 2.0555684234113483,
+      "d_emb": 5.251479140667887,
+      "rel_err": 1.5547576431207863
+     },
+     {
+      "i": "경상북도 고령군",
+      "j": "경상남도 합천군",
+      "d_true": 3.075953180530791,
+      "d_emb": 7.829542008944264,
+      "rel_err": 1.5454035056519253
+     },
+     {
+      "i": "충청북도 괴산군",
+      "j": "경상북도 문경시",
+      "d_true": 4.57526297211782,
+      "d_emb": 10.851092693049685,
+      "rel_err": 1.3716872143038534
+     },
+     {
+      "i": "충청북도 영동군",
+      "j": "경상북도 김천시",
+      "d_true": 2.9060740963503755,
+      "d_emb": 6.834280738749251,
+      "rel_err": 1.3517228095911786
+     },
+     {
+      "i": "충청남도 보령시",
+      "j": "충청남도 서천군",
+      "d_true": 2.473320007066037,
+      "d_emb": 5.365860594488422,
+      "rel_err": 1.1694971047655278
+     }
+    ]
+   },
+   "euclid": {
+    "max_abs_rel_err": 0.8953328098796364,
+    "median_abs_rel_err": 0.8674385932811375,
+    "min_abs_rel_err": 0.8478152634792228,
+    "n_underestimated": 19,
+    "n_overestimated": 1,
+    "n_pairs_with_ulleung": 0,
+    "most_frequent_units": [
+     {
+      "unit": "서울특별시 은평구",
+      "n_pairs": 2
+     },
+     {
+      "unit": "경기도 고양시 일산동구",
+      "n_pairs": 2
+     },
+     {
+      "unit": "서울특별시 노원구",
+      "n_pairs": 2
+     }
+    ],
+    "top5": [
+     {
+      "i": "경상남도 거제시",
+      "j": "경상남도 의령군",
+      "d_true": 6.323679183852681,
+      "d_emb": 0.6618817313964949,
+      "rel_err": -0.8953328098796364
+     },
+     {
+      "i": "전라남도 영광군",
+      "j": "전라남도 진도군",
+      "d_true": 7.317229290913887,
+      "d_emb": 0.7817616151444036,
+      "rel_err": -0.8931615254813526
+     },
+     {
+      "i": "전라남도 담양군",
+      "j": "전라남도 강진군",
+      "d_true": 6.165274810701815,
+      "d_emb": 0.6702380078696993,
+      "rel_err": -0.8912882185387283
+     },
+     {
+      "i": "서울특별시 양천구",
+      "j": "경기도 고양시 일산동구",
+      "d_true": 4.545226862771951,
+      "d_emb": 0.5224390403372191,
+      "rel_err": -0.885057653641824
+     },
+     {
+      "i": "경상북도 봉화군",
+      "j": "경상북도 울진군",
+      "d_true": 4.975452763850526,
+      "d_emb": 0.582467794544783,
+      "rel_err": -0.8829317004521195
+     }
+    ]
+   }
+  },
+  "d_flow_alt": {
+   "poincare": {
+    "max_abs_rel_err": 1.90324874471628,
+    "median_abs_rel_err": 0.9819841484734309,
+    "min_abs_rel_err": 0.9128266187703328,
+    "n_underestimated": 4,
+    "n_overestimated": 16,
+    "n_pairs_with_ulleung": 0,
+    "most_frequent_units": [
+     {
+      "unit": "경기도 고양시 일산동구",
+      "n_pairs": 4
+     },
+     {
+      "unit": "경상북도 울진군",
+      "n_pairs": 3
+     },
+     {
+      "unit": "경상북도 경주시",
+      "n_pairs": 3
+     }
+    ],
+    "top5": [
+     {
+      "i": "충청북도 보은군",
+      "j": "충청북도 옥천군",
+      "d_true": 3.1676183540673963,
+      "d_emb": 9.196384010186415,
+      "rel_err": 1.90324874471628
+     },
+     {
+      "i": "경상북도 고령군",
+      "j": "경상남도 합천군",
+      "d_true": 3.173183633464505,
+      "d_emb": 7.599127023192379,
+      "rel_err": 1.394795858346085
+     },
+     {
+      "i": "경상북도 울진군",
+      "j": "강원특별자치도 삼척시",
+      "d_true": 2.1098093230045545,
+      "d_emb": 4.966025331641683,
+      "rel_err": 1.3537792147821326
+     },
+     {
+      "i": "충청남도 보령시",
+      "j": "충청남도 서천군",
+      "d_true": 2.5809102882417903,
+      "d_emb": 5.53160345813097,
+      "rel_err": 1.1432761469207438
+     },
+     {
+      "i": "경상북도 봉화군",
+      "j": "강원특별자치도 태백시",
+      "d_true": 2.192051482988731,
+      "d_emb": 4.615138049480176,
+      "rel_err": 1.1053967414979289
+     }
+    ]
+   },
+   "euclid": {
+    "max_abs_rel_err": 0.9303686880863176,
+    "median_abs_rel_err": 0.8658360231704602,
+    "min_abs_rel_err": 0.8397408814156029,
+    "n_underestimated": 20,
+    "n_overestimated": 0,
+    "n_pairs_with_ulleung": 0,
+    "most_frequent_units": [
+     {
+      "unit": "대구광역시 군위군",
+      "n_pairs": 2
+     },
+     {
+      "unit": "경상남도 의령군",
+      "n_pairs": 2
+     },
+     {
+      "unit": "전라남도 강진군",
+      "n_pairs": 2
+     }
+    ],
+    "top5": [
+     {
+      "i": "경상남도 통영시",
+      "j": "경상남도 의령군",
+      "d_true": 5.731122065010256,
+      "d_emb": 0.3990655481241173,
+      "rel_err": -0.9303686880863176
+     },
+     {
+      "i": "서울특별시 양천구",
+      "j": "경기도 고양시 일산동구",
+      "d_true": 4.584962629523,
+      "d_emb": 0.4601036688631674,
+      "rel_err": -0.8996494178817255
+     },
+     {
+      "i": "전라남도 담양군",
+      "j": "전라남도 강진군",
+      "d_true": 5.963323342871418,
+      "d_emb": 0.655251489483341,
+      "rel_err": -0.890119745013218
+     },
+     {
+      "i": "경기도 과천시",
+      "j": "경기도 파주시",
+      "d_true": 6.339190917054162,
+      "d_emb": 0.7569574243288546,
+      "rel_err": -0.8805908460190982
+     },
+     {
+      "i": "경상남도 거제시",
+      "j": "경상남도 의령군",
+      "d_true": 6.203110400038566,
+      "d_emb": 0.7469556781539868,
+      "rel_err": -0.8795836878625692
+     }
+    ]
+   }
+  }
+ },
+ "run": {
+  "embedding_seconds": 584.9990935999958,
+  "wall_seconds_nbconvert": 734.0,
+  "n_workers": 10,
+  "attempts_used": {
+   "d_time_250": 1,
+   "d_time_247": 1,
+   "d_flow_main": 1,
+   "d_flow_alt": 1,
+   "ctrl_main_0": 1,
+   "ctrl_main_1": 1,
+   "ctrl_main_2": 1,
+   "ctrl_main_3": 1,
+   "ctrl_main_4": 1,
+   "ctrl_alt_0": 1,
+   "ctrl_alt_1": 1,
+   "ctrl_alt_2": 1,
+   "ctrl_alt_3": 1,
+   "ctrl_alt_4": 1
+  },
+  "restart_seconds_sum_all_inputs": 5331.204024700011
+ },
+ "files": {
+  "results_json": "C:\\Users\\mycoms\\OneDrive\\Desktop\\Korea Feature Manifold\\notebooks\\spike\\s4_results.json",
+  "figures_dir": "C:\\Users\\mycoms\\OneDrive\\Desktop\\Korea Feature Manifold\\notebooks\\spike\\s4_outputs",
+  "outputs_dir": "C:\\dev\\kfm-data\\spike\\s4\\s4_real",
+  "notebook": "C:\\Users\\mycoms\\OneDrive\\Desktop\\Korea Feature Manifold\\notebooks\\spike\\03_embedding.ipynb"
+ },
+ "figures": {
+  "d_time_247_poincare": {
+   "path": "C:\\Users\\mycoms\\OneDrive\\Desktop\\Korea Feature Manifold\\notebooks\\spike\\s4_outputs\\d_time_247_poincare.png",
+   "scale": 159.2709842632091,
+   "labels_placed": [
+    "화성시",
+    "부천시",
+    "남양주시",
+    "인천 서구",
+    "서울 강서구",
+    "김해시",
+    "울릉군",
+    "완도군",
+    "고성군",
+    "진도군"
+   ]
+  },
+  "d_time_247_euclid": {
+   "path": "C:\\Users\\mycoms\\OneDrive\\Desktop\\Korea Feature Manifold\\notebooks\\spike\\s4_outputs\\d_time_247_euclid.png",
+   "scale": 147.16467231831763,
+   "labels_placed": [
+    "부천시",
+    "남양주시",
+    "인천 서구",
+    "김해시",
+    "파주시",
+    "울릉군",
+    "완도군",
+    "고성군",
+    "진도군"
+   ]
+  },
+  "d_flow_main_poincare": {
+   "path": "C:\\Users\\mycoms\\OneDrive\\Desktop\\Korea Feature Manifold\\notebooks\\spike\\s4_outputs\\d_flow_main_poincare.png",
+   "scale": 2.556149295964835,
+   "labels_placed": [
+    "화성시",
+    "남양주시",
+    "서울 송파구",
+    "평택시",
+    "서울 강남구",
+    "김해시",
+    "울릉군",
+    "완도군",
+    "함평군",
+    "화순군",
+    "강진군"
+   ]
+  },
+  "d_flow_main_euclid": {
+   "path": "C:\\Users\\mycoms\\OneDrive\\Desktop\\Korea Feature Manifold\\notebooks\\spike\\s4_outputs\\d_flow_main_euclid.png",
+   "scale": 11.918072093775999,
+   "labels_placed": [
+    "화성시",
+    "부천시",
+    "남양주시",
+    "인천 서구",
+    "평택시",
+    "김해시",
+    "파주시",
+    "울릉군",
+    "인천 옹진군",
+    "인천 강화군",
+    "인천 동구",
+    "완도군",
+    "함평군",
+    "화순군",
+    "강진군"
+   ]
+  }
+ }
+}
