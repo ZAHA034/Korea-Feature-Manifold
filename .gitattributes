@@ -7,3 +7,9 @@
 *.parquet binary
 *.tif binary
 *.pbf binary
+
+# 0S 고정 MD5(s3_freeze.json, s4_freeze.json)는 CRLF 작업 트리 바이트로 구했다. 새 clone에서도 같은 바이트가 나오게 이 파일만 CRLF로 푼다
+notebooks/spike/island_links.csv text eol=crlf
+
+# 원자료 목록 사본은 줄바꿈 변환 없이 둔다(CRLF와 MD5 보존)
+notebooks/spike/env/raw_manifest.csv -text

@@ -1,0 +1,59 @@
+# KFM CI: uv.lock 그대로 설치하고 ruff(린트·포맷 검사)와 pytest를 돌린다. ubuntu·windows, Python 3.11.
+# - 실데이터 테스트(@pytest.mark.data)는 pyproject의 addopts로 빠지므로 data/ 없이 돈다.
+# - 러너에는 UV_PROJECT_ENVIRONMENT가 없어 작업 공간에 .venv가 생긴다(로컬 OneDrive 규칙과 무관).
+# - fetch-depth: 0은 tests/test_repo_invariants.py의 0S 증거물 검사(태그 0S-end, 기준 커밋)에 필요하다.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHONUTF8: "1" # Windows 러너의 기본 인코딩(cp1252)에서 한글 출력과 파일 읽기가 깨지지 않게 한다
+
+jobs:
+  check:
+    name: ruff + pytest (${{ matrix.os }}, Python 3.11)
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Set up uv and Python 3.11
+        uses: astral-sh/setup-uv@v7
+        with:
+          version: "0.12.19"
+          python-version: "3.11"
+          enable-cache: true
+          cache-dependency-glob: uv.lock
+
+      - name: Install (uv.lock must be current)
+        run: uv sync --locked
+
+      - name: Ruff lint
+        run: uv run --locked ruff check --output-format=github .
+
+      - name: Ruff format check
+        run: uv run --locked ruff format --check .
+
+      - name: Pytest
+        run: uv run --locked pytest
+
+      - name: Large file guard (5 MB)
+        if: runner.os == 'Linux'
+        run: git ls-files -z | xargs -0 stat -c '%s %n' | awk '$1 > 5242880 { print; bad = 1 } END { exit bad }'

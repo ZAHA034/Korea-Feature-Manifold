@@ -25,22 +25,30 @@ dependencies = [
 requires = ["uv_build>=0.12.19,<0.13.0"]
 build-backend = "uv_build"
 
+[tool.uv]
+required-version = ">=0.12.19"  # 로컬과 CI(.github/workflows/ci.yml)의 uv 버전을 맞춘다
+
 [tool.ruff]
 line-length = 100
 target-version = "py311"
 extend-exclude = [
     "docs",             # 동결 문서(PLAN)와 ADR 채택 전 DESIGN.md를 포맷하지 않는다
-    "notebooks/spike",  # 0S 탐색 코드는 규칙 밖이다(PLAN 6.1a)
+    "notebooks/spike",  # 0S·전력망 탐색 코드는 규칙 밖이다(PLAN 6.1a, ADR 0014 5항)
 ]
 
 [tool.ruff.lint]
-select = ["E", "F", "I", "UP", "B"]
+select = ["E", "F", "I", "UP", "B", "NPY", "PD", "PT", "RUF"]
+# 수식 기호(ρ, α, ×, −, ℓ, ′, –)를 문자열·주석에 쓰므로 혼동 문자 규칙은 끈다
+ignore = ["RUF001", "RUF002", "RUF003"]
 
 [tool.pytest.ini_options]
+minversion = "9.0"
 testpaths = ["tests"]
-addopts = "-m 'not data'"
+# --import-mode=importlib는 쓰지 않는다: tests/fixtures/*.py를 import하려면 pythonpath 설정이 함께 필요하다. P5에서 정한다
+addopts = "-ra -m 'not data'"
+strict = true  # strict_config, strict_markers, strict_xfail, strict_parametrization_ids
 markers = [
-    "data: data/ 아래 실데이터가 필요한 테스트. 기본 실행에서 제외하고 `-m data`로 실행한다",
+    "data: data/ 아래 실데이터가 필요한 테스트. 기본 실행에서 빠지고 `-m data`로만 돈다. 다른 -m과 함께 쓰면 `-m 'not slow and not data'`처럼 data 조건을 다시 적는다",
 ]
 
 [dependency-groups]

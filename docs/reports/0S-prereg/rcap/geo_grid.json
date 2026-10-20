@@ -1,0 +1,30 @@
+[
+ {
+  "space": "euclid",
+  "seed": 0,
+  "rmax": null,
+  "dtype": "float64",
+  "k_stop": 2132,
+  "converged": true,
+  "mrd": 0.02500770446234432,
+  "s": 116.88207934794927,
+  "loss_internal": 29.758672705023127,
+  "seconds": 4.320437200003653,
+  "finite": true
+ },
+ {
+  "space": "poincare",
+  "seed": 0,
+  "rmax": 5,
+  "dtype": "float64",
+  "k_stop": 4323,
+  "converged": true,
+  "mrd": 0.024732251931709397,
+  "s": 448.31001611695814,
+  "loss_internal": 29.79058995454372,
+  "seconds": 28.73714409999957,
+  "finite": true,
+  "max_radius": 0.496590917205963,
+  "at_cap": 0
+ }
+]

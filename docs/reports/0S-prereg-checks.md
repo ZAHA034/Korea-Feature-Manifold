@@ -1,6 +1,6 @@
 # 0S 사전 검증: 판정 규칙의 합성 자료 점검 (2026-10-18)
 
-> S1 채택 커밋 전에 읽는다. 합성 자료로만 계산했고 실데이터는 쓰지 않았다. 스크립트와 전체 결과는 `C:\dev\kfm-data\0S-prereg\`(git 밖, `bar/`, `rcap/`, `results_full.md`)에 있다.
+> S1 채택 커밋 전에 읽는다. 합성 자료로만 계산했고 실데이터는 쓰지 않았다. 스크립트와 전체 결과는 `docs/reports/0S-prereg/`(`bar/`, `rcap/`, `results_full.md`)에 있다. 2026-10-18 실행본의 사본이고 원본은 `C:\dev\kfm-data\0S-prereg\`다(사본은 줄바꿈만 LF로 맞췄다). 스크립트가 읽는 중간 결과(`res/`, `res_n0/`의 `*.npz`, `*.jsonl`)는 사본에 없어 그대로는 다시 돌릴 수 없다. 환경 위치만 `results_full.md`에 적혀 있고 실행 명령은 기록되지 않았다([`0S-prereg/README.md`](0S-prereg/README.md)). (2026-10-20 보강: 처음에는 `C:\dev\kfm-data\0S-prereg\`(git 밖)에만 있었고, 이날 사본을 저장소로 옮겼다)
 
 ## 요약
 

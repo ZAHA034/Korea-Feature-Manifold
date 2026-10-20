@@ -1,5 +1,5 @@
-# 데이터: git에 올리지 않는다 (CLAUDE.md)
-data/
+# 데이터: 저장소 루트의 data/는 git에 올리지 않는다 (CLAUDE.md, DESIGN 11.2). 하위 폴더의 data/는 막지 않는다
+/data/
 
 # Python
 .venv/
@@ -28,6 +28,16 @@ viewer/dist/
 .env
 .claude/settings.local.json
 .vscode/
+
+# 전력망 탐색 결과는 저장소에 넣지 않는다(ADR 0014 4항). 코드 두 파일만 허용한다
+notebooks/spike/power/*
+!notebooks/spike/power/power_lib.py
+!notebooks/spike/power/05_power_grid.ipynb
+
+# 테스트 커버리지
+.coverage
+.coverage.*
+htmlcov/
 
 # OS
 .DS_Store

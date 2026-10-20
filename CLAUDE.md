@@ -8,7 +8,7 @@ Korea Feature Manifold (KFM): 한국의 지형·인구·연결망을 비유클�
 ## 명령어
 - 환경: `uv sync`
 - 테스트: `uv run pytest`
-- 린트/포맷: `uv run ruff check . && uv run ruff format .`
+- 린트/포맷: `uv run ruff check .` 다음 `uv run ruff format .`(Bash에서는 `&&`로 이어도 되지만 PowerShell 5.1에서는 `&&`가 구문 오류다)
 - 가상환경은 OneDrive 밖 `C:\dev\kfm-venv`에 있다. Claude Code는 `.claude/settings.local.json`, VSCode 터미널은 `.vscode/settings.json`으로 자동 지정된다(둘 다 git 제외). 저장소 안에 `.venv`가 생기면 잘못된 것이다.
 
 ## 규약
@@ -30,5 +30,5 @@ Korea Feature Manifold (KFM): 한국의 지형·인구·연결망을 비유클�
 - OSM으로 만든 표·그림·통행시간을 저장소에 넣거나 공개할 때는 "© OpenStreetMap contributors"와 ODbL 1.0 고지를 달고 `NOTICE.md`를 갱신한다.
 
 ## 현재 단계
-0단계 골격(트랙 B). 다음 세션은 P2(ADR 작성)다. 0S 탐색 실험은 2026-10-19에 끝났다(태그 `0S-end`, 판단 "조정", `docs/reports/0S-spike.md`). 2단계 착수 전에 0S 결과로 ADR 0009(그래프 정의·엣지 길이)를 고친다. `notebooks/spike/`의 0S 코드는 kfm 패키지·runs·테스트 규칙 밖이다.
-구현은 `docs/IMPLEMENTATION.md`의 세션 블록 단위로 진행한다. 맨 위 "진행 현황" 표에서 다음 세션을 확인하고, 세션이 끝나면 표를 갱신한다.
+0단계 골격(트랙 B). P2(ADR 0001·0002·0003·0005·0006 초안, 0004 수정, 0009·0010 0S 반영 개정안)는 초안까지 끝났고 사용자의 채택 결정을 기다린다. 채택한 것만 DESIGN.md v0.2에 반영한다. 0S 탐색 실험은 2026-10-19에 끝났다(태그 `0S-end`, 판단 "조정", `docs/reports/0S-spike.md`). ADR 0009 개정안(0S 반영)은 PLAN 4.2 표대로 3단계 시작 전에 채택하는 것이 지금 계획이다(1항을 1단계 1-6 전에 따로 채택할지는 사용자 결정, ADR 0009 열린 점). 전력망 탐색(ADR 0014, 제안)은 탐색만 했고, 결과 파일(표·그림·그래프)은 저장소 밖 `C:\dev\kfm-data\power\`에만 두며 보안 검토 전에는 공개하지 않는다. 저장소 문서에 집계를 적을 수 있는지는 ADR 0014 열린 점(사용자 결정)이다. `notebooks/spike/`의 0S 코드와 `notebooks/spike/power/`의 전력망 탐색 코드는 kfm 패키지·runs·테스트 규칙 밖이다.
+구현은 `docs/IMPLEMENTATION.md`의 세션 블록 단위로 진행한다. 맨 위 "진행 현황" 표에서 다음 세션을 확인하고, 세션이 끝나면 표와 이 문단을 함께 갱신한다.

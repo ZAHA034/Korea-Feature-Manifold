@@ -1,0 +1,81 @@
+{
+ "geoopt_grid_road": {
+  "k_stop": 4323,
+  "loss_stop": 29.790589856746998,
+  "loss_stop_over_E": 1.0010725327718828,
+  "polish": {
+   "loss": 29.662734146704466,
+   "mrd": 0.024822150925772918,
+   "nit": 760,
+   "msg": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+   "at_cap": 0,
+   "max_radius": 0.3381884879661258,
+   "seconds": 0.9521050000039395
+  },
+  "polish_over_E": 0.9967761143358229
+ },
+ "tree7_R5_seed2": {
+  "k_stop": 50000,
+  "converged": false,
+  "loss_stop": 329.4898839468888,
+  "mrd_stop": 0.06487061374142451,
+  "polish": {
+   "loss": 328.59051390674006,
+   "mrd": 0.06485893065730552,
+   "nit": 4769,
+   "msg": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+   "at_cap": 84,
+   "max_radius": 5.0,
+   "seconds": 7.309365699999034
+  }
+ },
+ "tree7_R5_seed0": {
+  "k_stop": 34034,
+  "converged": true,
+  "loss_stop": 401.7280821092446,
+  "mrd_stop": 0.07031834082764062,
+  "polish": {
+   "loss": 401.5886661263797,
+   "mrd": 0.07025093401164842,
+   "nit": 1617,
+   "msg": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+   "at_cap": 80,
+   "max_radius": 5.0,
+   "seconds": 2.485755899993819
+  }
+ },
+ "tree_dim5_R5_seed1": {
+  "k_stop": 17092,
+  "loss_stop": 0.6312450633997211,
+  "mrd_stop": 0.02528934177740138,
+  "polish": {
+   "loss": 0.6307245612734513,
+   "mrd": 0.025281054441300084,
+   "nit": 3990,
+   "msg": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+   "at_cap": 16,
+   "max_radius": 5.0,
+   "seconds": 0.4652605000010226
+  }
+ },
+ "tree_2d_general_vs_polar": {
+  "general": {
+   "loss": 1.0427667814861525,
+   "mrd": 0.03393851448875915,
+   "nit": 457,
+   "msg": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+   "at_cap": 4,
+   "max_radius": 5.0,
+   "seconds": 0.046396999998250976
+  },
+  "polar": {
+   "loss": 1.042766781485992,
+   "mrd": 0.03393851656322059,
+   "s": 0.8014696294266297,
+   "nit": 357,
+   "msg": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+   "max_radius": 5.0,
+   "at_cap": 4
+  }
+ }
+}
